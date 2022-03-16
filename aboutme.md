@@ -4,8 +4,8 @@ title: About me
 subtitle: Brandon Smith
 ---
 
-With an honest desire to learn about and understand the world through technology,
-I am excited on a daily basis by the opportunity to form hypotheses concerning real world events, investigate data, sculpt predictions, and learn from any findings. Currently my goals are to build more projects and applications that showcase the services and products I offer. When in a comfortable environment with other engaged data scientists, I find that there is no challenge which cannot be overcome by creating, connecting, collaborating and learning. I believe everyday is an opportunity to be the best, and that facing new challenges is what allows a me to evolve.
+With an earnest desire to learn about and understand the world through technology,
+I am excited on a daily basis by opportunities to form hypotheses concerning real world events, investigate data, sculpt predictions, and learn from findings. When in a comfortable environment with other engaged data scientists, I find that there is no challenge which cannot be overcome by connecting, collaborating, creating and learning. Currently my goals are to build more projects and applications which implement the services I offer. I believe everyday is an opportunity to be the best, and that facing new challenges allows me to evolve.
 
 Here's a bit more about me:
 
