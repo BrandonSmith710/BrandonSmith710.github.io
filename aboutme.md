@@ -10,8 +10,8 @@ I am excited on a daily basis by the opportunity to form hypotheses concerning r
 Here's a bit more about me:
 
 - I am 24 years old
-- I was once a Kinesiology student at San Francisco State University
 - I have been learning about Python for two years
 - I studied data science at Bloom Institute of Technology
 - My favorite sectors of data science are natural language processing and database development
-- As technology takes new forms, I accept the facts without hesitation and embrace the challenge within the change
+- I plan to continue my personal research of cyber security as it may pertain to data science or analytics tasks
+- As technology takes new forms, I accept the facts without hesitation and embrace challenge within change
