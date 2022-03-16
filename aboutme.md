@@ -1,16 +1,17 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Brandon Smith
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+With an honest desire to learn about and understand the world through technology,
+I am excited on a daily basis by the opportunity to form hypotheses concerning real world events, investigate data, sculpt predictions, and learn from any findings. Currently my goals are to build more projects and applications that showcase the services and products I offer. When in a comfortable environment with other engaged data scientists, I find that there is no challenge which cannot be overcome by creating, connecting, collaborating and learning. I believe everyday is an opportunity to be the best, and that facing new challenges is what allows a me to evolve.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Here's a bit more about me:
 
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+- I am 24 years old
+- I was once a Kinesiology student at San Francisco State University
+- I have been learning about Python for two years
+- I studied data science at Bloom Institute of Technology
+- My favorite sectors of data science are natural language processing and database development
+- As technology takes new forms, I accept the facts without hesitation and embrace the challenge within the change
