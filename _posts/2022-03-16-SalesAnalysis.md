@@ -24,7 +24,7 @@ In considering each year from which the data was provided, these were the most p
 ![Screenshot (10)](https://user-images.githubusercontent.com/75755695/158914569-8acd32ed-6c7c-4a89-b211-1e1b2f5ca139.png)
 
 
-##The bar chart shows profits by region
+The bar chart shows profits by region
 
 
 ![image](https://user-images.githubusercontent.com/75755695/158943517-dea3f270-05d4-457a-87c9-a89224a2fd6e.png)
@@ -37,7 +37,7 @@ Below are the respective profits of each product category from 2014-2017, note s
 ![Screenshot (27)](https://user-images.githubusercontent.com/75755695/158942285-60b84b78-ddea-4dca-b698-74bcb658368a.png)
 
 
-##Here are the profits by postal code per product category:
+Here are the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
