@@ -43,6 +43,8 @@ The next step I wanted to take was to look at the fifty best customers, and so I
 ~~~
 # find ID numbers of 50 best customers
 
+a = df['Customer_ID'].unique()
+
 s = sorted(a, key= lambda x: df[df['Customer_ID'] == x]['Sales'].sum(),
            reverse=True)
 
@@ -50,7 +52,7 @@ best_50 = s[:50]
 
 print((2*'\n').join(' | '.join(best_50[i*10:i*10+10]) for i in range(5)))
 ~~~
-
+>>>
 ~~~
 SM-20320 | TC-20980 | RB-19360 | TA-21385 | AB-10105 | KL-16645 | SC-20095 | HL-15040 | SE-20110 | CC-12370
 
