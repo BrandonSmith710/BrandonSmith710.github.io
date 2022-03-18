@@ -34,6 +34,7 @@ Below are the respective profits of each product category from 2014-2017, note s
 
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/75755695/158914792-4f435d36-1d5b-4b7d-ac9c-3c316e5db5a5.png)
+
 ![Screenshot (27)](https://user-images.githubusercontent.com/75755695/158942285-60b84b78-ddea-4dca-b698-74bcb658368a.png)
 
 
