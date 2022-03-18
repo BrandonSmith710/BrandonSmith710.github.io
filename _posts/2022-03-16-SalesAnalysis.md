@@ -42,6 +42,8 @@ Here are the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
+This boxplot suggests that throughout the four year timeframe of available data, there were three extraordinarily outlying purchases, two being technology purchases and the other one office supplies.
+
 ![Screenshot (30)](https://user-images.githubusercontent.com/75755695/159062541-81aef824-7053-4553-989d-421724f2cf33.png)
 
 The following code was implemented to pull the 50 best customers
