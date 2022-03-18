@@ -22,13 +22,14 @@ My initial inspection of the sample data found that overall the three most profi
 ![Screenshot (10)](https://user-images.githubusercontent.com/75755695/158914569-8acd32ed-6c7c-4a89-b211-1e1b2f5ca139.png)
 
 
-Below are the respective profits of each product category from 2014-2017, note very similar patterns in zones central and south from 2015-2017, and also in zones east and west from 2016-2017
+Below are the respective profits of each product category from 2014-2017, note similar patterns in zones central and south technology profits from 2015-2017, and also in zones east and west technology profits from 2016-2017
 
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/75755695/158914792-4f435d36-1d5b-4b7d-ac9c-3c316e5db5a5.png)
-<!-- ![Screenshot (13)](https://user-images.githubusercontent.com/75755695/158914889-34d16aa6-9a8b-4e6d-bda2-176b47041d18.png) -->
+![Screenshot (14)](https://user-images.githubusercontent.com/75755695/158941847-fa253b71-695d-4a09-8288-1530023e7e12.png)
 
-
+Here is a snapshot of profits by product category per postal code:
+![Screenshot (26)](https://user-images.githubusercontent.com/75755695/158942196-9cee2e60-ec74-4f39-80ca-c7de9f8051e0.png)
 ~~~
 def wrangle(path,limit=None):
   df = pd.read_csv(path)
