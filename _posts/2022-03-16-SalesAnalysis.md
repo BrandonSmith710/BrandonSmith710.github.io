@@ -42,7 +42,7 @@ Here are the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
-This boxplot suggests that throughout the four year timeframe of available data, there were three extraordinarily outlying purchases, one 2017 office supplies purchase from the west with a profit if $22,171, a 2017 tech purchase from the west with a profit of $18,984 and one 2017 tech purchase from the east with a profit of $19,301.
+This boxplot suggests that throughout the four year timeframe of available data, there were three extraordinarily outlying purchases, one 2017 office supplies purchase from the west with a profit if $22,171, one 2017 tech purchase from the west with a profit of $18,984 and one 2017 tech purchase from the east with a profit of $19,301.
 
 ![Screenshot (33)](https://user-images.githubusercontent.com/75755695/159067842-9d980a34-48ff-4b52-b613-328766925827.png)
 The following code was implemented to pull the 50 best customers
