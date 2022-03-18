@@ -42,7 +42,7 @@ Here are the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
-![Screenshot (17)](https://user-images.githubusercontent.com/75755695/159059697-5854a1f7-c4d4-49ee-9a84-fb427831031b.png)
+![Screenshot (30)](https://user-images.githubusercontent.com/75755695/159062541-81aef824-7053-4553-989d-421724f2cf33.png)
 
 The following code was implemented to pull the 50 best customers
 ~~~
