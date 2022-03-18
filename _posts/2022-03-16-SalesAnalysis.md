@@ -21,6 +21,11 @@ My initial inspection of the sample data found that overall the three most profi
 ![image](https://user-images.githubusercontent.com/75755695/158914344-6dce84b3-75e3-4425-9ad1-629ee6ceacb1.png)
 ![Screenshot (10)](https://user-images.githubusercontent.com/75755695/158914569-8acd32ed-6c7c-4a89-b211-1e1b2f5ca139.png)
 
+Here are the profits for each cateogory of product from 2014-2017
+![Screenshot (16)](https://user-images.githubusercontent.com/75755695/158914792-4f435d36-1d5b-4b7d-ac9c-3c316e5db5a5.png)
+![Screenshot (13)](https://user-images.githubusercontent.com/75755695/158914889-34d16aa6-9a8b-4e6d-bda2-176b47041d18.png)
+
+
 ~~~
 def wrangle(path,limit=None):
   df = pd.read_csv(path)
