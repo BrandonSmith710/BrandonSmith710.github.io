@@ -68,3 +68,48 @@ DR-12940 | NF-18385 | KD-16270 | NC-18535 | HM-14860 | KD-16495 | SB-20290 | ZC-
 AH-10690 | AB-10060 | JE-15610 | JW-15220 | LC-16885 | JM-15865 | JD-15895 | PO-18850 | MS-17365 | RW-19540
 ~~~
 
+Next, I took a look at the products purchased most frequently by our most frequent customers
+
+~~~
+# find the sub-categories & products most frequently purchased by 50_best
+
+# s will hold the sub-categories, and s2 products
+s, s2 = set(), set()
+
+for id in best_50:
+
+  tmp = df[df['Customer_ID'] == id]
+
+  u = list(tmp['Sub-Category'].unique())
+  u2 = list(tmp['Product_Name'].unique())
+  m = max(u, key=lambda x: u.count(x))
+  m2 = max(u2, key=lambda x: u2.count(x))
+  print(f'{id} Main purchase type: {m} Favorite Item: {m2}')
+
+  s.add(m)
+  s2.add(m2)
+~~~
+
+When considering the list comprised of, the single most purchased item for each of the 50 best customers, there were a total of 49 unique items, and 14 unique sub-categories(with 17 possible sub-categories).
+
+~~~
+plt.figure(figsize=(20, 15))
+
+# plot the profits by year for favorite products of top 9 customers
+
+for i in range(1, 10):
+  product = s2[i-1]
+  dfx = df[df['Product_Name'] == product]
+  dfx_dict = {year: 0 for year in years}
+  plt.subplot(3, 3, i)
+
+  for year in years:
+    dfx_e = dfx[dfx['Order_Year'] == year]
+    sales = dfx_e['Profit'].sum()
+    dfx_dict[year] = sales
+  dfx = pd.Series(dfx_dict.values(), dfx_dict.keys()).plot(kind='bar', color='red')
+  plt.title(product)
+
+~~~
+
+![image](https://user-images.githubusercontent.com/75755695/158950869-f9036c6b-b135-46f1-b183-2b204fbea228.png)
