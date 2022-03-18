@@ -112,6 +112,7 @@ for i in range(1, 10):
   plt.title(product)
 
 ~~~
+
 The code above creates nine plots, each displays profits for the favorite products of the top nine customers.
 These plots can be seen below
 
