@@ -23,7 +23,10 @@ In considering each year from which the data was provided, these were the most p
 ![image](https://user-images.githubusercontent.com/75755695/158914344-6dce84b3-75e3-4425-9ad1-629ee6ceacb1.png)
 ![Screenshot (10)](https://user-images.githubusercontent.com/75755695/158914569-8acd32ed-6c7c-4a89-b211-1e1b2f5ca139.png)
 
+
 The bar chart shows profits by region
+
+
 ![image](https://user-images.githubusercontent.com/75755695/158943517-dea3f270-05d4-457a-87c9-a89224a2fd6e.png)
 
 
@@ -38,8 +41,8 @@ Here are the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
-The next step I wanted to take was to look at the fifty best customers, and so I implemented the following lines of code:
 
+The following code was implemented to pull the 50 best customers
 ~~~
 # find ID numbers of 50 best customers
 
