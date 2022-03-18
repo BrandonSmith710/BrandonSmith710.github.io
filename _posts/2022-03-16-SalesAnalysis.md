@@ -13,8 +13,7 @@ The dataset examined in this post was made available on Kaggle.com by user vivek
 
 My initial inspection of the sample data found that overall the three most profitable states, in descending order of profitability, are California, New York, and Washington.
 
-![Screenshot (6)](https://user-images.githubusercontent.com/75755695/158914522-aefbb521-fd9d-4020-a0be-3afc38503208.png)
-
+![Screenshot (5)](https://user-images.githubusercontent.com/75755695/158944199-f1f03264-6896-4593-a880-881233ea8f06.png)
 In considering each year from which the data was provided, these were the most profitable states per year:
   - 2014 New York($13k), California($12k), Washington($6k)
   - 2015 New York($19k), California($14k), Washington($5k)
