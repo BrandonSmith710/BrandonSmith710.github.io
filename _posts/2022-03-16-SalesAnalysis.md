@@ -50,8 +50,10 @@ s1 = sorted(zip(s1, si), key= lambda x: x[1], reverse=True)
 
 # print the name and quantity purchased of the most popular items
 print('\n'.join(': '.join(x) for x in s1[:10]))
-
->>> Flat Face Poster Frame: 4
+~~~
+Output
+~~~
+    Flat Face Poster Frame: 4
     Staples: 4
     Xerox 212: 3
     Pressboard Covers with Storage Hooks, 9 1/2" x 11", Light Blue: 3
