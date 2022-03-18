@@ -30,7 +30,7 @@ The orange bar charts show profits by region
 ![image](https://user-images.githubusercontent.com/75755695/158943517-dea3f270-05d4-457a-87c9-a89224a2fd6e.png)
 
 
-Below are the respective profits of each product category from 2014-2017. Among the apparent relations in regional profits, the most notable are within central and south technology from 2015-2017, and in east and west technology from 2016-2017. Another observation is that in the west and central regions, customers purchased tech and office supplies at a similar rate, whereas in the south and east regions, tech and office supplies appeared to have a negative correlation.
+Below are the respective profits of each product category from 2014-2017. Among the apparent relations in regional profits, the most notable are within central and south technology from 2015-2017, and in east and west technology from 2016-2017. Another observation is that in the west and central regions, customers purchased tech and office supplies at a similar rate, whereas in the east and south regions, tech and office supplies were purchased more inversely.
 
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/75755695/158914792-4f435d36-1d5b-4b7d-ac9c-3c316e5db5a5.png)
