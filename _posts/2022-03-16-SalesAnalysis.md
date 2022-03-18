@@ -31,6 +31,5 @@ Below are the respective profits of each product category from 2014-2017, note s
 
 Here is a snapshot of profits by product category per postal code:
 
-![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942478-f2c7abc6-54a3-48b9-8fb8-ae960945164c.png)def wrangle(path,limit=None):
-
+![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
