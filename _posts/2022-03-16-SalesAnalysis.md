@@ -20,6 +20,7 @@ My initial inspection of the sample data found that overall the three most profi
 ![Screenshot (6)](https://user-images.githubusercontent.com/75755695/158914522-aefbb521-fd9d-4020-a0be-3afc38503208.png)
 ![image](https://user-images.githubusercontent.com/75755695/158914344-6dce84b3-75e3-4425-9ad1-629ee6ceacb1.png)
 ![Screenshot (10)](https://user-images.githubusercontent.com/75755695/158914569-8acd32ed-6c7c-4a89-b211-1e1b2f5ca139.png)
+![image](https://user-images.githubusercontent.com/75755695/158943517-dea3f270-05d4-457a-87c9-a89224a2fd6e.png)
 
 
 Below are the respective profits of each product category from 2014-2017, note similar patterns in zones central and south technology profits from 2015-2017, and also in zones east and west technology profits from 2016-2017
