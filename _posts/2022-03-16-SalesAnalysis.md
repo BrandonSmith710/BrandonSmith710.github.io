@@ -72,7 +72,7 @@ AH-10690 | AB-10060 | JE-15610 | JW-15220 | LC-16885 | JM-15865 | JD-15895 | PO-
 Next, I took a look at the products purchased most frequently by our most frequent customers
 
 ~~~
-# find the sub-categories & products most frequently purchased by 50_best
+# find the sub-categories & products most frequently purchased by best_50
 
 # s will hold the sub-categories, and s2 products
 s, s2 = set(), set()
