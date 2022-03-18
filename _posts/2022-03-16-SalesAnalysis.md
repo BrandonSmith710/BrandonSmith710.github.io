@@ -26,10 +26,12 @@ Below are the respective profits of each product category from 2014-2017, note s
 
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/75755695/158914792-4f435d36-1d5b-4b7d-ac9c-3c316e5db5a5.png)
-![Screenshot (14)](https://user-images.githubusercontent.com/75755695/158941847-fa253b71-695d-4a09-8288-1530023e7e12.png)
+![Screenshot (27)](https://user-images.githubusercontent.com/75755695/158942285-60b84b78-ddea-4dca-b698-74bcb658368a.png)
+
 
 Here is a snapshot of profits by product category per postal code:
 ![Screenshot (26)](https://user-images.githubusercontent.com/75755695/158942196-9cee2e60-ec74-4f39-80ca-c7de9f8051e0.png)
+
 ~~~
 def wrangle(path,limit=None):
   df = pd.read_csv(path)
