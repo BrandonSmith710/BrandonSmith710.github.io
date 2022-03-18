@@ -42,6 +42,7 @@ Here are the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
+![Screenshot (17)](https://user-images.githubusercontent.com/75755695/159059697-5854a1f7-c4d4-49ee-9a84-fb427831031b.png)
 
 The following code was implemented to pull the 50 best customers
 ~~~
@@ -56,7 +57,7 @@ best_50 = s[:50]
 
 print((2*'\n').join(' | '.join(best_50[i*10:i*10+10]) for i in range(5)))
 ~~~
-
+my chosen form of output
 ~~~
 SM-20320 | TC-20980 | RB-19360 | TA-21385 | AB-10105 | KL-16645 | SC-20095 | HL-15040 | SE-20110 | CC-12370
 
