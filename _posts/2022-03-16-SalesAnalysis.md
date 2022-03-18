@@ -29,7 +29,39 @@ The orange bar charts show profits by region
 
 ![image](https://user-images.githubusercontent.com/75755695/158943517-dea3f270-05d4-457a-87c9-a89224a2fd6e.png)
 
+In 2016, the best year for central, there were 505 unique products, out of 2359 total products sold.
+~~~
+df_16 = df[df['Order_Year'] == 2016]
+df_c16 = df_16[df_16['Region'] == 'Central']
 
+unique_products = df_c16['Product_Name'].nunique()
+
+total_products = df_c16['Quantity'].sum()
+~~~
+Let's have a look at the 10 most popular purchases in central during 2016
+~~~
+s = list(df_c16['Product_Name'])
+
+s1 = set(s)
+
+si = [str(s.count(x)) for x in s1]
+
+s1 = sorted(zip(s1, si), key= lambda x: x[1], reverse=True)
+
+# print the name and quantity purchased of the most popular items
+print('\n'.join(': '.join(x) for x in s1[:10]))
+
+>>> Flat Face Poster Frame: 4
+    Staples: 4
+    Xerox 212: 3
+    Pressboard Covers with Storage Hooks, 9 1/2" x 11", Light Blue: 3
+    Staple-based wall hangings: 3
+    Westinghouse Clip-On Gooseneck Lamps: 3
+    Staple envelope: 3
+    Avery Binding System Hidden Tab Executive Style Index Sets: 3
+    Storex Dura Pro Binders: 3
+    Panasonic KP-380BK Classic Electric Pencil Sharpener: 2
+~~~
 Below are the respective profits of each product category from 2014-2017. Among the apparent relations in regional profits, the most notable are within central and south technology from 2015-2017, and in east and west technology from 2016-2017. Another observation is that in the west and central regions, customers purchased tech and office supplies at a similar rate, whereas in the east and south regions, tech and office supplies were purchased more inversely.
 
 
