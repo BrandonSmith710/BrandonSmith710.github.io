@@ -27,7 +27,7 @@ The bar chart shows profits by region
 ![image](https://user-images.githubusercontent.com/75755695/158943517-dea3f270-05d4-457a-87c9-a89224a2fd6e.png)
 
 
-Below are the respective profits of each product category from 2014-2017, note similar patterns in zones central and south technology profits from 2015-2017, and also in zones east and west technology profits from 2016-2017
+Below are the respective profits of each product category from 2014-2017, note similar patterns in regions central and south technology profits from 2015-2017, and also in regions east and west technology profits from 2016-2017
 
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/75755695/158914792-4f435d36-1d5b-4b7d-ac9c-3c316e5db5a5.png)
@@ -37,4 +37,29 @@ Below are the respective profits of each product category from 2014-2017, note s
 Here are the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
+
+The next step I wanted to take was to look at the fifty best customers, and so I implemented the following lines of code:
+
+~~~
+# find ID numbers of 50 best customers
+
+s = sorted(a, key= lambda x: df[df['Customer_ID'] == x]['Sales'].sum(),
+           reverse=True)
+
+best_50 = s[:50]
+
+print((2*'\n').join(' | '.join(best_50[i*10:i*10+10]) for i in range(5)))
+~~~
+
+~~~
+SM-20320 | TC-20980 | RB-19360 | TA-21385 | AB-10105 | KL-16645 | SC-20095 | HL-15040 | SE-20110 | CC-12370
+
+TS-21370 | GT-14710 | BM-11140 | SV-20365 | CJ-12010 | CL-12565 | ME-17320 | KF-16285 | BS-11365 | EH-13765
+
+JL-15835 | GT-14635 | HW-14935 | TB-21400 | PF-19120 | CM-12385 | JD-16150 | JE-15715 | LA-16780 | PK-19075
+
+DR-12940 | NF-18385 | KD-16270 | NC-18535 | HM-14860 | KD-16495 | SB-20290 | ZC-21910 | JH-15985 | NP-18700
+
+AH-10690 | AB-10060 | JE-15610 | JW-15220 | LC-16885 | JM-15865 | JD-15895 | PO-18850 | MS-17365 | RW-19540
+~~~
 
