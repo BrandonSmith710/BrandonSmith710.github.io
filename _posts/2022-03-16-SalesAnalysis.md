@@ -11,13 +11,16 @@ tags: [regional, shopping, sales, python]
 
 The dataset examined in this post was made available on Kaggle.com by user vivek468, and contains 10000 rows of information about orders made to a superstore.
 
-My initial inspection of the sample data found that overall the three most profitable states, in descending order of profitability, are California, New York, and Washington. In considering each year from which the data was provided, these were the most profitable states per year:
+My initial inspection of the sample data found that overall the three most profitable states, in descending order of profitability, are California, New York, and Washington.
+
+![Screenshot (6)](https://user-images.githubusercontent.com/75755695/158914522-aefbb521-fd9d-4020-a0be-3afc38503208.png)
+
+In considering each year from which the data was provided, these were the most profitable states per year:
   - 2014 New York($13k), California($12k), Washington($6k)
   - 2015 New York($19k), California($14k), Washington($5k)
   - 2016 California($20k), New York($16k), Michigan($9k)
   - 2017 California($29k), New York($24k), Washington($17k)
 
-![Screenshot (6)](https://user-images.githubusercontent.com/75755695/158914522-aefbb521-fd9d-4020-a0be-3afc38503208.png)
 ![image](https://user-images.githubusercontent.com/75755695/158914344-6dce84b3-75e3-4425-9ad1-629ee6ceacb1.png)
 ![Screenshot (10)](https://user-images.githubusercontent.com/75755695/158914569-8acd32ed-6c7c-4a89-b211-1e1b2f5ca139.png)
 ![image](https://user-images.githubusercontent.com/75755695/158943517-dea3f270-05d4-457a-87c9-a89224a2fd6e.png)
