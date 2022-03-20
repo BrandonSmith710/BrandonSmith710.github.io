@@ -156,7 +156,7 @@ The code above creates nine red barplots, each displays profits for the favorite
 
 ![Screenshot (38)](https://user-images.githubusercontent.com/75755695/159184268-b150919d-2ebd-4cc6-9def-5a4144cfb6a3.png)
 
+The above key and the plot below tell us that during 2015 and 2017, the Hon Olsen Stacker Stools product only sold in one city. We can also safely assume that Philadelphia is not a signifcant source of sales for this product.
 
-![Screenshot (39)](https://user-images.githubusercontent.com/75755695/159184275-b37c1036-2431-4e15-a356-de250c6f166d.png)
-
+![Screenshot (41)](https://user-images.githubusercontent.com/75755695/159184407-29fc5f76-8195-4c93-a2a4-407ba698eeb9.png)
 
