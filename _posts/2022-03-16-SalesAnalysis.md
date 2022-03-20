@@ -92,7 +92,7 @@ best_50 = s[:50]
 
 print((2*'\n').join(' | '.join(best_50[i*10:i*10+10]) for i in range(5)))
 ~~~
-my chosen form of output
+top 50 customers(#1 at top left #50 at bottom right)
 ~~~
 SM-20320 | TC-20980 | RB-19360 | TA-21385 | AB-10105 | KL-16645 | SC-20095 | HL-15040 | SE-20110 | CC-12370
 
@@ -105,7 +105,7 @@ DR-12940 | NF-18385 | KD-16270 | NC-18535 | HM-14860 | KD-16495 | SB-20290 | ZC-
 AH-10690 | AB-10060 | JE-15610 | JW-15220 | LC-16885 | JM-15865 | JD-15895 | PO-18850 | MS-17365 | RW-19540
 ~~~
 
-Next, I took a look at the products purchased most frequently by our most frequent customers
+Now lets look at the products purchased most frequently by our most frequent customers
 
 ~~~
 # find the sub-categories & products most frequently purchased by best_50
@@ -149,7 +149,14 @@ for i in range(1, 10):
 
 ~~~
 
-The code above creates nine red barplots, each displays profits for the favorite products of the top nine customers.
-
+The code above creates nine red barplots, each displays profits for the favorite products of the top nine customers. Only the Hon Olsen Stacker Stools and the Rogers Handheld Barrel Pencil Sharpener returned profits each year. Next, I will take a look at the regional and city-wide profits of the Hon Olsen Stacker Stools to find where the majority and minority of sales come from.
 
 ![image](https://user-images.githubusercontent.com/75755695/158950869-f9036c6b-b135-46f1-b183-2b204fbea228.png)
+
+
+![Screenshot (38)](https://user-images.githubusercontent.com/75755695/159184268-b150919d-2ebd-4cc6-9def-5a4144cfb6a3.png)
+
+
+![Screenshot (39)](https://user-images.githubusercontent.com/75755695/159184275-b37c1036-2431-4e15-a356-de250c6f166d.png)
+
+
