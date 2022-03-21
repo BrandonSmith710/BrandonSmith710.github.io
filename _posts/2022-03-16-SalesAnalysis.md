@@ -11,6 +11,21 @@ tags: [regional, shopping, sales, python]
 
 The dataset examined in this post was made available on Kaggle.com by user vivek468, and contains 10000 rows of information about orders made to a superstore.
 
+~~~
+import io
+import pandas as pd
+from google.colab import files
+import seaborn as sns
+import matplotlib.pyplot as plt
+~~~
+
+~~~
+up = files.upload()
+df = pd.read_csv(io.BytesIO(up['Sample - Superstore.csv']), encoding='latin1', parse_dates=['Order Date', 'Ship Date'])
+
+df.columns = ['_'.join(x.split()) for x in df.columns]
+df['Order_Year'] = df['Order_Date'].apply(lambda x: x.year)
+~~~
 My initial inspection of the sample data found that overall the three most profitable states, in descending order of profitability, are California, New York, and Washington.
 
 ![Screenshot (5)](https://user-images.githubusercontent.com/75755695/158944199-f1f03264-6896-4593-a880-881233ea8f06.png)
@@ -72,13 +87,15 @@ Below are the respective profits of each product category from 2014-2017. Among 
 ![Screenshot (27)](https://user-images.githubusercontent.com/75755695/158942285-60b84b78-ddea-4dca-b698-74bcb658368a.png)
 
 
-Here are the profits by postal code per product category:
+Here is a section of the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
 This boxplot suggests that throughout the four year timeframe of available data, there were three extraordinarily outlying purchases, one 2017 office supplies purchase from the west with a profit if $22,171, one 2017 tech purchase from the west with a profit of $18,984 and one 2017 tech purchase from the east with a profit of $19,301.
 
 ![Screenshot (33)](https://user-images.githubusercontent.com/75755695/159067842-9d980a34-48ff-4b52-b613-328766925827.png)
+
+
 The following code was implemented to pull the 50 best customers
 ~~~
 # find ID numbers of 50 best customers
