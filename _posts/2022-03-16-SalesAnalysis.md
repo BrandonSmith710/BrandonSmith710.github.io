@@ -165,7 +165,7 @@ best_50 = s[:50]
 
 print((2*'\n').join(' | '.join(best_50[i*10:i*10+10]) for i in range(5)))
 ~~~
-top 50 customers(#1 at top left #50 at bottom right)
+top 50 customers(first at top left and fiftieth at bottom right)
 ~~~
 SM-20320 | TC-20980 | RB-19360 | TA-21385 | AB-10105 | KL-16645 | SC-20095 | HL-15040 | SE-20110 | CC-12370
 
@@ -227,7 +227,7 @@ The code above creates nine red barplots, each displays profits for the favorite
 ![image](https://user-images.githubusercontent.com/75755695/158950869-f9036c6b-b135-46f1-b183-2b204fbea228.png)
 
 
-Regional profits for the stacker stools
+Regional profits for the stacker stools(key is shown right)
 ![Screenshot (42)](https://user-images.githubusercontent.com/75755695/159199049-d715b810-186d-4174-b360-9abdae5dcdf6.png)
 
 
