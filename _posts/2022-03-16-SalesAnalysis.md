@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Superstore Sales Exploratory Data Analysis
+title: Superstore Hypothesis Testing and Data Imagination
 subtitle: 
 cover-img: 
 thumbnail-img: assets/img/Screenshot (6).png
@@ -38,6 +38,62 @@ In considering each year from which the data was provided, these were the most p
 ![image](https://user-images.githubusercontent.com/75755695/158914344-6dce84b3-75e3-4425-9ad1-629ee6ceacb1.png)
 ![Screenshot (10)](https://user-images.githubusercontent.com/75755695/158914569-8acd32ed-6c7c-4a89-b211-1e1b2f5ca139.png)
 
+Before exploring anymore visualizations, I decided to conduct a few hypothesis tests.
+
+Null Hypothesis 1: There is no association between the city of Fort Lauderdale and the Bretford CR4500 Series Slim Rectangular Table.
+
+Null Hypothesis 2: There is no association between the state of New York and the Bretford CR4500 Series Slim Rectangular Table.
+~~~
+# engineer features which indicate possession of target characteristics
+
+target_name = 'Bretford CR4500 Series Slim Rectangular Table'
+mask = df['Product_Name'] == target_name
+mask2 = df['City'] == 'Fort Lauderdale'
+mask3 = df['State'] == 'New York'
+df.loc[mask, 'Bretford'] = 1
+df.loc[~mask, 'Bretford'] = 0
+df.loc[mask2, 'Fort_Laud'] = 1
+df.loc[~mask2, 'Fort_Laud'] = 0
+df.loc[mask3, 'New_York'] = 1
+df.loc[~mask3, 'New_York'] = 0
+
+# compute the probabilities amongst target variables
+
+# 12.5% of Bretford Table purchases were in Fort Lauderdale
+fl_probabilities = pd.crosstab(df['Bretford'], df['Fort_Laud'], normalize='index') * 100
+
+# Also 12.5% of Bretford Table purchases in New York
+ny_probabilities = pd.crosstab(df['Bretford'], df['New_York'], normalize='index') * 100
+
+# verify the probabilities
+dfb = df[df['Bretford'] == 1]
+len(dfb[dfb['State'] == 'New York']) / len(dfb), len(dfb[dfb['City'] == 'Fort Lauderdale']) / len(dfb)
+
+# implement the chi-square test
+chi, fl_p_val, dof, expected = chi2_contingency(pd.crosstab(df['Bretford'], df['Fort_Laud']))
+chi, ny_p_val, dof, expected = chi2_contingency(pd.crosstab(df['Bretford'], df['New_York']))
+~~~
+
+The resulting p-value for Fort Lauderdale was 8.252040908989258e-06; at the .05 significance level we can reject Null Hypothesis 1 and conclude that there is an association between Fort Lauderdale and the Bretford Table.
+
+The resulting p-value for New York was 0.6524267307791584; at the .05 significance level we fail to reject Null Hypothesis 2 and conclude that there is no association between New York and the Bretford Table.
+
+
+This line of code reports the distribution of states amongst purchases of the Bretford Table
+~~~
+df[df['Product_Name'] == target_name]['State'].value_counts()
+~~~
+This output tells us that Florida and Texas were the most popular states with the Bretford Table,
+and therefore a statistically significant association between Fort Lauderdale and the Bretford Table is conceivable
+~~~
+Florida       2
+Texas         2
+Utah          1
+California    1
+New York      1
+Idaho         1
+Name: State, dtype: int64
+~~~
 
 The orange bar charts show profits by region
 
