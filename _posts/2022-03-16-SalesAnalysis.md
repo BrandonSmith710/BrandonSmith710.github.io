@@ -21,7 +21,8 @@ import matplotlib.pyplot as plt
 
 ~~~
 up = files.upload()
-df = pd.read_csv(io.BytesIO(up['Sample - Superstore.csv']), encoding='latin1', parse_dates=['Order Date', 'Ship Date'])
+df = pd.read_csv(io.BytesIO(up['Sample - Superstore.csv']),
+     encoding='latin1', parse_dates=['Order Date', 'Ship Date'])
 
 df.columns = ['_'.join(x.split()) for x in df.columns]
 df['Order_Year'] = df['Order_Date'].apply(lambda x: x.year)
