@@ -80,7 +80,7 @@ The resulting p-value for Fort Lauderdale was 8.252040908989258e-06; at the .05 
 The resulting p-value for New York was 0.6524267307791584; at the .05 significance level we fail to reject Null Hypothesis 2 and conclude that there is no association between New York and the Bretford Table.
 
 
-This line of code reports the distribution of states amongst purchases of the Bretford Table, and the output is in the following cell.
+This line of code reports the distribution of states amongst purchases of the Bretford Table; the output is in the following cell.
 ~~~
 df[df['Product_Name'] == target_name]['State'].value_counts()
 ~~~
