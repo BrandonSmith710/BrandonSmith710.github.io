@@ -238,4 +238,4 @@ The key and plot below tell us that during 2015 and 2017, the Hon Olsen Stacker 
 
 
 
-Throughout this article we took a look at the most popular areas of sale, some of the most frequent customers, and the items that the most frequent customers were buying. I also conducted a couple of statistical tests to ascertain the correlation of certain products with certain locations. With the data brought to light in this presentation, the process of focusing energy and resources into a nationwide business is hopefully easier and more precise.
+Throughout this article we took a look at the most popular areas of sale, some of the most frequent customers, and the items that the most frequent customers were buying. I also conducted a couple of statistical tests to ascertain the correlation of certain products with certain locations. With the data brought to light in this presentation, the process of focusing energy and resources into a nationwide business is hopefully quicker and more precise.
