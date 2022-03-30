@@ -85,7 +85,7 @@ This line of code reports the distribution of states amongst purchases of the Br
 df[df['Product_Name'] == target_name]['State'].value_counts()
 ~~~
 This output tells us that Florida and Texas were the most popular states with the Bretford Table,
-and therefore a statistically significant association between Fort Lauderdale and the Bretford Table is conceivable
+and therefore a statistically significant association between Fort Lauderdale and the Bretford Table is conceivable.
 ~~~
 Florida       2
 Texas         2
@@ -96,7 +96,7 @@ Idaho         1
 Name: State, dtype: int64
 ~~~
 
-The orange bar charts show profits by region
+The orange bar charts show company-wide profits by region.
 
 
 ![image](https://user-images.githubusercontent.com/75755695/158943517-dea3f270-05d4-457a-87c9-a89224a2fd6e.png)
@@ -110,7 +110,7 @@ unique_products = df_c16['Product_Name'].nunique()
 
 total_products = df_c16['Quantity'].sum()
 ~~~
-Let's have a look at the 10 most popular purchases in central during 2016
+Let's have a look at the 10 most popular purchases in central during 2016.
 ~~~
 s = list(df_c16['Product_Name'])
 
@@ -153,7 +153,7 @@ This boxplot suggests that throughout the four year timeframe of available data,
 ![Screenshot (33)](https://user-images.githubusercontent.com/75755695/159067842-9d980a34-48ff-4b52-b613-328766925827.png)
 
 
-The following code was implemented to pull the 50 best customers
+The following code was implemented to pull the 50 best customers.
 ~~~
 # find ID numbers of 50 best customers
 
@@ -179,7 +179,7 @@ DR-12940 | NF-18385 | KD-16270 | NC-18535 | HM-14860 | KD-16495 | SB-20290 | ZC-
 AH-10690 | AB-10060 | JE-15610 | JW-15220 | LC-16885 | JM-15865 | JD-15895 | PO-18850 | MS-17365 | RW-19540
 ~~~
 
-Now lets look at the products purchased most frequently by our most frequent customers
+Now lets look at the products purchased most frequently by our most frequent customers.
 
 ~~~
 # find the sub-categories & products most frequently purchased by best_50
