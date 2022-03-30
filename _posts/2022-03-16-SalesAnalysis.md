@@ -39,7 +39,7 @@ In considering each year from which the data was provided, these were the most p
 ![image](https://user-images.githubusercontent.com/75755695/158914344-6dce84b3-75e3-4425-9ad1-629ee6ceacb1.png)
 ![Screenshot (10)](https://user-images.githubusercontent.com/75755695/158914569-8acd32ed-6c7c-4a89-b211-1e1b2f5ca139.png)
 
-Before exploring anymore visualizations, I decided to conduct a few product-specific hypothesis tests.
+Before exploring anymore visualizations, I conducted two product-specific hypothesis tests.
 
 Null Hypothesis 1: There is no association between the city of Fort Lauderdale and the Bretford CR4500 Series Slim Rectangular Table.
 
@@ -148,7 +148,7 @@ Here is a section of the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
-This boxplot suggests that throughout the four year timeframe of available data, there were three extraordinarily outlying purchases, one 2017 office supplies purchase from the west with a profit if $22,171, one 2017 tech purchase from the west with a profit of $18,984 and one 2017 tech purchase from the east with a profit of $19,301.
+This boxplot suggests that throughout the four year timeframe of available data, there were three extraordinarily outlying purchases, one 2017 office supplies purchase from the west with a profit of $22,171, one 2017 tech purchase from the west with a profit of $18,984 and one 2017 tech purchase from the east with a profit of $19,301.
 
 ![Screenshot (33)](https://user-images.githubusercontent.com/75755695/159067842-9d980a34-48ff-4b52-b613-328766925827.png)
 
@@ -236,3 +236,6 @@ The key and plot below tell us that during 2015 and 2017, the Hon Olsen Stacker 
 ![Screenshot (38)](https://user-images.githubusercontent.com/75755695/159184268-b150919d-2ebd-4cc6-9def-5a4144cfb6a3.png)
 ![Screenshot (41)](https://user-images.githubusercontent.com/75755695/159184407-29fc5f76-8195-4c93-a2a4-407ba698eeb9.png)
 
+
+
+Throughout this article we took a look at the most popular areas of sale, some of the most frequent customers, and the items that the most frequent customers were buying. I also conducted a couple of statistical tests to ascertain the correlation of certain products with certain locations. With the data brought to light in this presentation, the process of focusing energy and resources into a nationwide business is made easier and more precise.
