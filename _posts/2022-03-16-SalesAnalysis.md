@@ -9,7 +9,7 @@ tags: [regional, shopping, sales, python]
 ---
 
 
-The dataset examined in this post was made available on Kaggle.com by user vivek468, and contains 10000 rows of information about orders made to a superstore.
+The dataset examined in this post was made available on Kaggle.com by user vivek468, and contains 10000 rows of information for orders made to a superstore.
 
 ~~~
 import io
