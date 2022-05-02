@@ -12,16 +12,14 @@ tags: [regional, shopping, sales, python]
 The dataset examined in this post was made available on Kaggle.com by user vivek468, and contains 10000 rows of information for orders made to a superstore.
 
 ~~~
-import io
 import pandas as pd
-from google.colab import files
 import seaborn as sns
 import matplotlib.pyplot as plt
 ~~~
 
 ~~~
 up = files.upload()
-df = pd.read_csv(io.BytesIO(up['Sample - Superstore.csv']),
+df = pd.read_csv('Sample - Superstore.csv',
      encoding='latin1', parse_dates=['Order Date', 'Ship Date'])
 
 df.columns = ['_'.join(x.split()) for x in df.columns]
@@ -189,16 +187,16 @@ s, s2 = set(), set()
 
 for id in best_50:
 
-  tmp = df[df['Customer_ID'] == id]
+    tmp = df[df['Customer_ID'] == id]
 
-  u = list(tmp['Sub-Category'].unique())
-  u2 = list(tmp['Product_Name'].unique())
-  m = max(u, key=lambda x: u.count(x))
-  m2 = max(u2, key=lambda x: u2.count(x))
-  print(f'{id} Main purchase type: {m} Favorite Item: {m2}')
+    u = list(tmp['Sub-Category'].unique())
+    u2 = list(tmp['Product_Name'].unique())
+    m = max(u, key=lambda x: u.count(x))
+    m2 = max(u2, key=lambda x: u2.count(x))
+    print(f'{id} Main purchase type: {m} Favorite Item: {m2}')
 
-  s.add(m)
-  s2.add(m2)
+    s.add(m)
+    s2.add(m2)
 ~~~
 
 When considering the list comprised of, the single most purchased item for each of the 50 best customers, there were a total of 49 unique items, and 14 unique sub-categories(with 17 possible sub-categories).
@@ -209,15 +207,15 @@ plt.figure(figsize=(20, 15))
 # plot the profits by year for favorite products of top 9 customers
 
 for i in range(1, 10):
-  product = s2[i-1]
-  dfx = df[df['Product_Name'] == product]
-  dfx_dict = {year: 0 for year in years}
-  plt.subplot(3, 3, i)
+    product = s2[i-1]
+    dfx = df[df['Product_Name'] == product]
+    dfx_dict = {year: 0 for year in years}
+    plt.subplot(3, 3, i)
 
   for year in years:
-    dfx_e = dfx[dfx['Order_Year'] == year]
-    sales = dfx_e['Profit'].sum()
-    dfx_dict[year] = sales
+      dfx_e = dfx[dfx['Order_Year'] == year]
+      sales = dfx_e['Profit'].sum()
+      dfx_dict[year] = sales
   dfx = pd.Series(dfx_dict.values(), dfx_dict.keys()).plot(kind='bar', color='red')
   plt.title(product)
 
