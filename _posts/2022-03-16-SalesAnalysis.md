@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Superstore Data Imagination and Hypothesis Testing
+title: Superstore Data Visualization and Hypothesis Testing
 subtitle: 
 cover-img: 
 thumbnail-img: assets/img/Screenshot (6).png
