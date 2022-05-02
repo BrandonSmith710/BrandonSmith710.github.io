@@ -212,12 +212,12 @@ for i in range(1, 10):
     dfx_dict = {year: 0 for year in years}
     plt.subplot(3, 3, i)
 
-  for year in years:
-      dfx_e = dfx[dfx['Order_Year'] == year]
-      sales = dfx_e['Profit'].sum()
-      dfx_dict[year] = sales
-  dfx = pd.Series(dfx_dict.values(), dfx_dict.keys()).plot(kind='bar', color='red')
-  plt.title(product)
+    for year in years:
+        dfx_e = dfx[dfx['Order_Year'] == year]
+        sales = dfx_e['Profit'].sum()
+        dfx_dict[year] = sales
+    dfx = pd.Series(dfx_dict.values(), dfx_dict.keys()).plot(kind='bar', color='red')
+    plt.title(product)
 
 ~~~
 
