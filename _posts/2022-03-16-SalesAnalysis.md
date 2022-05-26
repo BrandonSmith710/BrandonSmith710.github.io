@@ -38,9 +38,9 @@ In considering each year from which the data was provided, these were the most p
 
 Before exploring anymore visualizations, I conducted two product-specific hypothesis tests.
 
-Null Hypothesis 1: There is no association between the city of Fort Lauderdale and the Bretford CR4500 Series Slim Rectangular Table.
+null hypothesis one: There is no association between the city of Fort Lauderdale and the Bretford CR4500 Series Slim Rectangular Table.
 
-Null Hypothesis 2: There is no association between the state of New York and the Bretford CR4500 Series Slim Rectangular Table.
+null hypothesis two: There is no association between the state of New York and the Bretford CR4500 Series Slim Rectangular Table.
 ~~~
 # engineer features which indicate possession of target characteristics
 
@@ -65,11 +65,9 @@ ny_probabilities = pd.crosstab(df['Bretford'], df['New_York'], normalize = 'inde
 chi, fl_p_val, dof, expected = chi2_contingency(pd.crosstab(df['Bretford'], df['Fort_Laud']))
 chi, ny_p_val, dof, expected = chi2_contingency(pd.crosstab(df['Bretford'], df['New_York']))
 ~~~
+The resulting p-value for Fort Lauderdale was 8.252040908989258e-06. At the .05 significance level the directive is to reject null hypothesis one and conclude that there is a significant association between Fort Lauderdale and the Bretford Table.
 
-The resulting p-value for Fort Lauderdale was 8.252040908989258e-06; at the .05 significance level we can reject Null Hypothesis 1 and conclude that there is an association between Fort Lauderdale and the Bretford Table.
-
-The resulting p-value for New York was 0.6524267307791584; at the .05 significance level we fail to reject Null Hypothesis 2 and conclude that there is no association between New York and the Bretford Table.
-
+The resulting p-value for New York was 0.6524267307791584. At the .05 significance level the directive is to accept null hypothesis two and conclude that there is not a significant association between New York and the Bretford Table.
 
 This line of code reports the distribution of states amongst purchases of the Bretford Table; the output is in the following cell.
 ~~~
