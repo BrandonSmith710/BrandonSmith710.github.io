@@ -24,7 +24,7 @@ df.columns = ['_'.join(x.split()) for x in df.columns]
 df['Order_Year'] = df['Order_Date'].apply(lambda x: x.year)
 ~~~
 Considering the entire timeline of data, the three most profitable states, in descending order of profitability, were California, New York, and Washington.
-The color-coded images below shaded the least profitable states with blue, the neutral with grey, and the most profitable with yellow.
+The color-coded images below shade the least profitable states with blue, the neutral with grey, and the most profitable with yellow.
 
 ![Screenshot (5)](https://user-images.githubusercontent.com/75755695/158944199-f1f03264-6896-4593-a880-881233ea8f06.png)
 In considering each year from which the data was provided, these were the most profitable states per year:
