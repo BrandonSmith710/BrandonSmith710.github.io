@@ -18,14 +18,13 @@ import matplotlib.pyplot as plt
 ~~~
 
 ~~~
-up = files.upload()
 df = pd.read_csv('Sample - Superstore.csv',
-     encoding='latin1', parse_dates=['Order Date', 'Ship Date'])
-
+     encoding = 'latin1', parse_dates = ['Order Date', 'Ship Date'])
 df.columns = ['_'.join(x.split()) for x in df.columns]
 df['Order_Year'] = df['Order_Date'].apply(lambda x: x.year)
 ~~~
-My initial inspection of the sample data found that overall the three most profitable states, in descending order of profitability, are California, New York, and Washington.
+Considering the entire timeline of data, the three most profitable states, in descending order of profitability, were California, New York, and Washington.
+The color-coded images below shaded the least profitable states with blue, the neutral with grey, and the most profitable with yellow.
 
 ![Screenshot (5)](https://user-images.githubusercontent.com/75755695/158944199-f1f03264-6896-4593-a880-881233ea8f06.png)
 In considering each year from which the data was provided, these were the most profitable states per year:
@@ -56,17 +55,11 @@ df.loc[~mask2, 'Fort_Laud'] = 0
 df.loc[mask3, 'New_York'] = 1
 df.loc[~mask3, 'New_York'] = 0
 
-# compute the probabilities amongst target variables
-
 # 12.5% of Bretford Table purchases were in Fort Lauderdale
-fl_probabilities = pd.crosstab(df['Bretford'], df['Fort_Laud'], normalize='index') * 100
+fl_probabilities = pd.crosstab(df['Bretford'], df['Fort_Laud'], normalize = 'index') * 100
 
 # Also 12.5% of Bretford Table purchases in New York
-ny_probabilities = pd.crosstab(df['Bretford'], df['New_York'], normalize='index') * 100
-
-# verify the probabilities
-dfb = df[df['Bretford'] == 1]
-len(dfb[dfb['State'] == 'New York']) / len(dfb), len(dfb[dfb['City'] == 'Fort Lauderdale']) / len(dfb)
+ny_probabilities = pd.crosstab(df['Bretford'], df['New_York'], normalize = 'index') * 100
 
 # implement the chi-square test
 chi, fl_p_val, dof, expected = chi2_contingency(pd.crosstab(df['Bretford'], df['Fort_Laud']))
@@ -103,20 +96,15 @@ In 2016, the best year for central, there were 505 unique products, out of 2359 
 ~~~
 df_16 = df[df['Order_Year'] == 2016]
 df_c16 = df_16[df_16['Region'] == 'Central']
-
 unique_products = df_c16['Product_Name'].nunique()
-
 total_products = df_c16['Quantity'].sum()
 ~~~
 Let's have a look at the 10 most popular purchases in central during 2016.
 ~~~
 s = list(df_c16['Product_Name'])
-
 s1 = set(s)
-
 si = [str(s.count(x)) for x in s1]
-
-s1 = sorted(zip(s1, si), key= lambda x: x[1], reverse=True)
+s1 = sorted(zip(s1, si), key= lambda x: x[1], reverse = True)
 
 # print the name and quantity purchased of the most popular items
 print('\n'.join(': '.join(x) for x in s1[:10]))
@@ -158,11 +146,11 @@ The following code was implemented to pull the 50 best customers.
 a = df['Customer_ID'].unique()
 
 s = sorted(a, key= lambda x: df[df['Customer_ID'] == x]['Sales'].sum(),
-           reverse=True)
+           reverse = True)
 
 best_50 = s[:50]
 
-print((2*'\n').join(' | '.join(best_50[i*10:i*10+10]) for i in range(5)))
+print((2 * '\n').join(' | '.join(best_50[i * 10: i * 10 + 10]) for i in range(5)))
 ~~~
 top 50 customers(first at top left and fiftieth at bottom right)
 ~~~
@@ -191,8 +179,8 @@ for id in best_50:
 
     u = list(tmp['Sub-Category'].unique())
     u2 = list(tmp['Product_Name'].unique())
-    m = max(u, key=lambda x: u.count(x))
-    m2 = max(u2, key=lambda x: u2.count(x))
+    m = max(u, key = lambda x: u.count(x))
+    m2 = max(u2, key = lambda x: u2.count(x))
     print(f'{id} Main purchase type: {m} Favorite Item: {m2}')
 
     s.add(m)
@@ -202,7 +190,7 @@ for id in best_50:
 When considering the list comprised of, the single most purchased item for each of the 50 best customers, there were a total of 49 unique items, and 14 unique sub-categories(with 17 possible sub-categories).
 
 ~~~
-plt.figure(figsize=(20, 15))
+plt.figure(figsize = (20, 15))
 
 # plot the profits by year for favorite products of top 9 customers
 
@@ -216,7 +204,7 @@ for i in range(1, 10):
         dfx_e = dfx[dfx['Order_Year'] == year]
         sales = dfx_e['Profit'].sum()
         dfx_dict[year] = sales
-    dfx = pd.Series(dfx_dict.values(), dfx_dict.keys()).plot(kind='bar', color='red')
+    dfx = pd.Series(dfx_dict.values(), dfx_dict.keys()).plot(kind = 'bar', color = 'red')
     plt.title(product)
 
 ~~~
