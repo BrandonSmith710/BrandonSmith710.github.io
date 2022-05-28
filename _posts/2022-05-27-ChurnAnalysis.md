@@ -41,7 +41,7 @@ from sklearn.metrics import ConfusionMatrixDisplay
 df = pd.read_csv('churn.csv', parse_dates = ['joining_date'])
 df.drop('Unnamed: 0', axis = 1, inplace = True)
 ~~~
-###Explore the data: Visualize the feature distributions
+Explore the data: Visualize the feature distributions
 ~~~
 # first group the numeric features
 df_nums = df.drop('churn_risk_score', axis = 1).select_dtypes(include = [int,
@@ -71,14 +71,14 @@ plt.show()
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170802427-b0bb7239-200e-4592-aa57-1bad6a183da6.png)
 
-###Plot Target Distribution
+Plot Target Distribution
 ~~~
 pd.Series([16980, 20012]).plot(kind = 'bar')
 plt.show()
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170803014-b56e6cc5-4e2a-4100-a221-6ce072e56dd2.png)
 
-###Data Cleaning and Imputation
+Data Cleaning and Imputation
 ~~~
 # several columns contain invalid values which need to be replaced or removed
 df['joined_through_referral'] = pd.Series(
@@ -118,7 +118,7 @@ df.drop(['avg_frequency_login_days','points_in_wallet','days_since_last_login',
 df = pd.concat([df, dft], axis = 1)
 df = df.drop('security_no referral_id last_visit_time'.split(), axis = 1)
 ~~~
-###Split data and establish baseline accuracy
+Split data and establish baseline accuracy
 ~~~
 target = 'churn_risk_score'
 X = df.drop(columns = [target])
@@ -129,8 +129,7 @@ baseline = [1] * len(y_test)
 print('Baseline accuracy', accuracy_score(y_test, baseline))
 ~~~
 Baseline accuracy 0.5436050647318253
-
-###Encode categorical features
+Encode categorical features
 ~~~
 cols2encode = []
 for x in df:
