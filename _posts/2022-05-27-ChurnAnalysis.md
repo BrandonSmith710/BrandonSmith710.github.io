@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Customer Churn Analysis and Prediction
+title-color: orange
 subtitle: Why do customers leave?
 cover-img: /assets/img/walkout.png
 <!-- thumbnail-img: /assets/img/.png -->
