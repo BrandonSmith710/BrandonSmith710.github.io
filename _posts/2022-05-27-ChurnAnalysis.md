@@ -1,4 +1,4 @@
-
+Hello, welcome to Customer Churn Analysis. If you'll be following allowing with the code, you'll need to make sure the following requirements are installed in your environment: category_encoders==2.*, pdpbox==0.2.1, imgaug==0.2.5
 ~~~
 import warnings
 warnings.filterwarnings("ignore", category = FutureWarning)
@@ -24,4 +24,19 @@ import seaborn as sns
 from pdpbox import pdp
 from sklearn.datasets import make_classification
 from sklearn.metrics import ConfusionMatrixDisplay
+
+df = pd.read_csv('churn.csv', parse_dates = ['joining_date'])
+df.drop('Unnamed: 0', axis = 1, inplace = True)
+
+# group the numeric features
+df_nums = df.drop('churn_risk_score', axis = 1).select_dtypes(include = [int,
+                                                                         float]
+                  )
+plt.figure(figsize = (18, 13))
+for i, col in enumerate(df_nums):
+    plt.subplot(2, 3, i + 1)
+    plt.title(col)
+    df_nums[col].plot(kind = 'kde')
 ~~~
+
+![image](https://user-images.githubusercontent.com/75755695/170802370-5d654c94-a5a2-4912-a288-811d40ec3ca1.png)
