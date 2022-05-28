@@ -2,12 +2,12 @@
 layout: post
 title: Customer Churn Analysis and Prediction
 subtitle: Why do customers leave?
-cover-img: /assets/img/clouds.jpg
+cover-img: ![image](https://user-images.githubusercontent.com/75755695/170802669-05f8b628-0223-4149-8147-b5d18f115262.png)
 <!-- thumbnail-img: /assets/img/Airline_confusion_matrix.png -->
 <!-- share-img: /assets/img/path.jpg -->
 tags: [data analysis, machine learning, python]
 ---
-![image](https://user-images.githubusercontent.com/75755695/170802669-05f8b628-0223-4149-8147-b5d18f115262.png)
+<!-- ![image](https://user-images.githubusercontent.com/75755695/170802669-05f8b628-0223-4149-8147-b5d18f115262.png) -->
 
 Hello, welcome to Customer Churn Analysis. If you'll be following allowing with the code, the csv file needed can be found at https://github.com/BrandonSmith710/customerChurnAnalysis. Click on the text reading, "churn.csv" and then click download. Also,
 you'll need to make sure the following requirements are installed in your environment: category_encoders==2.*, pdpbox==0.2.1, imgaug==0.2.5
