@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Customer Churn Analysis and Prediction
+subtitle: Why do customers leave?
 cover-img: /assets/img/clouds.jpg
-thumbnail-img: /assets/img/Airline_confusion_matrix.png
+<!-- thumbnail-img: /assets/img/Airline_confusion_matrix.png -->
 <!-- share-img: /assets/img/path.jpg -->
-tags: [airline, customer classification, predictive modeling, python]
+tags: [data analysis, machine learning, python]
 ---
 ![image](https://user-images.githubusercontent.com/75755695/170802669-05f8b628-0223-4149-8147-b5d18f115262.png)
 
