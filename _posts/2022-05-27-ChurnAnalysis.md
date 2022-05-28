@@ -40,3 +40,18 @@ for i, col in enumerate(df_nums):
 ~~~
 
 ![image](https://user-images.githubusercontent.com/75755695/170802370-5d654c94-a5a2-4912-a288-811d40ec3ca1.png)
+
+~~~
+# isolate the categorical variables
+df_cats = df.drop(['referral_id','last_visit_time','avg_frequency_login_days',
+                      'security_no','joining_date'], axis = 1
+                     ).select_dtypes(include = 'object')
+plt.figure(figsize = (20, 24))
+for i, col in enumerate(df_cats):
+    plt.subplot(4, 3, i + 1)
+    ax = sns.countplot(x = df_cats[col])
+    ax.set_xticklabels(ax.get_xticklabels(), rotation = 35)
+    plt.tight_layout()
+plt.show()                    
+~~~
+![image](https://user-images.githubusercontent.com/75755695/170802427-b0bb7239-200e-4592-aa57-1bad6a183da6.png)
