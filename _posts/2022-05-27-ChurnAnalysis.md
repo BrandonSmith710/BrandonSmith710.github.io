@@ -40,8 +40,10 @@ from sklearn.metrics import ConfusionMatrixDisplay
 
 df = pd.read_csv('churn.csv', parse_dates = ['joining_date'])
 df.drop('Unnamed: 0', axis = 1, inplace = True)
-
-# group the numeric features
+~~~
+###Explore the data: Visualize the feature distributions
+~~~
+# first group the numeric features
 df_nums = df.drop('churn_risk_score', axis = 1).select_dtypes(include = [int,
                                                                          float]
                   )
@@ -55,7 +57,7 @@ for i, col in enumerate(df_nums):
 ![image](https://user-images.githubusercontent.com/75755695/170802370-5d654c94-a5a2-4912-a288-811d40ec3ca1.png)
 
 ~~~
-# isolate the categorical variables
+# next isolate the categorical variables
 df_cats = df.drop(['referral_id','last_visit_time','avg_frequency_login_days',
                       'security_no','joining_date'], axis = 1
                      ).select_dtypes(include = 'object')
@@ -68,3 +70,77 @@ for i, col in enumerate(df_cats):
 plt.show()                    
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170802427-b0bb7239-200e-4592-aa57-1bad6a183da6.png)
+
+###Plot Target Distribution
+~~~
+pd.Series([16980, 20012]).plot(kind = 'bar')
+plt.show()
+~~~
+![image](https://user-images.githubusercontent.com/75755695/170803014-b56e6cc5-4e2a-4100-a221-6ce072e56dd2.png)
+
+###Data Cleaning and Imputation
+~~~
+# several columns contain invalid values which need to be replaced or removed
+df['joined_through_referral'] = pd.Series(
+    np.nan if i == '?' else i for i in df['joined_through_referral'])
+df['gender'] = df['gender'].replace('Unknown', np.nan)
+df['medium_of_operation'] = df['medium_of_operation'].replace('?', np.nan)
+df['avg_time_spent'] = df['avg_time_spent'].apply(lambda x: x if x >= 0 else
+                                                  np.nan)
+df['points_in_wallet'] = df['points_in_wallet'].apply(lambda x: x if x >= 0 else
+                                                      np.nan)
+df['avg_frequency_login_days'] = df['avg_frequency_login_days'].apply(
+    lambda x: x if type(x) == float and x >= 0 else np.nan)
+df['days_since_last_login'] = df['days_since_last_login'].apply(
+    lambda x: x if x >= 0 else np.nan)
+
+# impute null categorical values with mode of the column
+for col in '''joined_through_referral gender medium_of_operation
+preferred_offer_types region_category'''.split():
+    df[col].fillna(df[col].mode()[0], inplace = True)
+m_n = df[['points_in_wallet', 'avg_time_spent', 'days_since_last_login']
+                 ]
+imputer = KNNImputer(n_neighbors = 3)
+imputed_values = imputer.fit_transform(m_n)
+
+dft = pd.DataFrame({
+    x: imputed_values.T[i] for i, x in enumerate(missing_num.columns)
+})
+df['year'] = df['joining_date'].apply(lambda x: x.year)
+cols2drop = '''internet_option joining_date complaint_status region_category
+               preferred_offer_types medium_of_operation gender
+               joined_through_referral offer_application_preference
+               used_special_discount past_complaint'''.split()
+
+df.drop(['avg_frequency_login_days','points_in_wallet','days_since_last_login',
+         'avg_time_spent'] + cols2drop, axis = 1, inplace = True)
+
+df = pd.concat([df, dft], axis = 1)
+df = df.drop('security_no referral_id last_visit_time'.split(), axis = 1)
+~~~
+###Split data and establish baseline accuracy
+~~~
+target = 'churn_risk_score'
+X = df.drop(columns = [target])
+y = df[target]
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 42,
+                                                    test_size = .19)
+baseline = [1] * len(y_test)
+print('Baseline accuracy', accuracy_score(y_test, baseline))
+~~~
+Baseline accuracy 0.5436050647318253
+
+###Encode categorical features
+~~~
+cols2encode = []
+for x in df:
+    if df[x].dtype == 'object':
+        if df[x].nunique() <= 10:
+            cols2encode += [x]
+
+ord_enc = OrdinalEncoder(cols = cols2encode)
+
+pipe_rf = make_pipeline(ord_enc,
+                        StandardScaler(),
+                        RandomForestClassifier(random_state = 42, n_jobs = -1))
+~~~
