@@ -144,6 +144,7 @@ pipe_rf = make_pipeline(ord_enc,
 Gridsearch for model hyperparameters
  - To show the impact of the hyperparameter gridsearch method, only the Random Forest Classifier has been gridsearched for hyperparameters. The other models were fitted using either default values, naive assumption or a combination of the two.
  - The Random Forest Classifier would typically place lower than the Extreme Gradient Boosting Classifier in a controlled comparison of accuracies, this is a metric we can use to gauge the impact of our hyperparameter gridsearch. Using only a three-parameter grid, the increase in model performance is apparent.
+
 ~~~
 params_rf = {'randomforestclassifier__max_depth': range(15, 24),
              'randomforestclassifier__max_features': ['auto', 'sqrt'],
