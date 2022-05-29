@@ -39,7 +39,7 @@ from sklearn.metrics import ConfusionMatrixDisplay
 df = pd.read_csv('churn.csv', parse_dates = ['joining_date'])
 df.drop('Unnamed: 0', axis = 1, inplace = True)
 ~~~
-Explore the data: Visualize the feature distributions
+Explore the data: visualize the feature distributions
 ~~~
 # first group the numeric features
 df_nums = df.drop('churn_risk_score', axis = 1).select_dtypes(include = [int,
@@ -127,6 +127,7 @@ baseline = [1] * len(y_test)
 print('Baseline accuracy', accuracy_score(y_test, baseline))
 ~~~
 Baseline accuracy 0.5436050647318253
+
 Encode categorical features
 ~~~
 cols2encode = []
@@ -154,6 +155,8 @@ grid_rf = GridSearchCV(pipe_rf, param_grid = params_rf, n_jobs = -1, cv = 5)
 grid_rf.fit(X, y)
 grid_rf.best_params_
 ~~~
+Below are the parameters output by the gridsearch
+
 {'randomforestclassifier__max_depth': 15,
  'randomforestclassifier__max_features': 'auto',
  'randomforestclassifier__n_estimators': 60}
