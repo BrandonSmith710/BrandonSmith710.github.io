@@ -194,8 +194,11 @@ l = [cv_rf, cv_xgb, cv_knn, cv_logr]
 print('\n'.join(f'{b}: cross validation - {a.mean()}' for a, b in zip(l, m)))
 ~~~
 Random_Forest: cross validation - 0.9344452997948292
+
 XGB: cross validation - 0.9300389116830085
+
 KNeighbors: cross validation - 0.8797575138292913
+
 Logistic_Regression: cross validation - 0.7376987771631751
 ~~~
 pipe_rf.fit(X_train, y_train)
@@ -279,12 +282,10 @@ for i, est in enumerate(zip(m, [pipe_rf, pipe_xgb, pipe_knn, pipe_logr])):
 
 Compare model scores
 ~~~
-df.head()
-~~~ 
-	               Training Acc.    Test Acc.       F1 Score
-Random_Forest	        0.966158	0.933419	0.938695
-XGB	                0.957648	0.922606	0.929716
-KNeighbors	        0.882856	0.849054	0.858778
-Logistic_Regression	0.703801	0.714753	0.748463
-
+#	               Training Acc.    Test Acc.       F1 Score
+# Random_Forest	        0.966158	0.933419	0.938695
+# XGB	                0.957648	0.922606	0.929716
+# KNeighbors	        0.882856	0.849054	0.858778
+# Logistic_Regression	0.703801	0.714753	0.748463
+~~~
 Thanks for reading!
