@@ -273,7 +273,7 @@ for i, est in enumerate(zip(m, [pipe_rf, pipe_xgb, pipe_knn, pipe_logr])):
     fpr, tpr, thresholds = roc_curve(y_test, y_pred_prob)
     plt.subplot(2, 2, i + 1)
     plt.plot(fpr, tpr)
-    plt.plot([0,1], ls = '--')
+    plt.plot([0, 1], ls = '--')
     plt.title(f'ROC curve for {est[0]}')
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
