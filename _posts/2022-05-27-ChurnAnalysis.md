@@ -8,7 +8,7 @@ cover-img: /assets/img/walkout.png
 <!-- share-img: /assets/img/.jpg -->
 tags: [data analysis, machine learning, python]
 ---
-<!-- ![image](https://user-images.githubusercontent.com/75755695/170802669-05f8b628-0223-4149-8147-b5d18f115262.png) -->
+
 
 Hello, welcome to Customer Churn Analysis. If you'll be following allowing with the code, the csv file needed can be found on Kaggle or at https://github.com/BrandonSmith710/customerChurnAnalysis. Click on the filename reading, "churn.csv" and then click download. Also,
 you'll need to make sure the following requirements are installed in your environment: category_encoders==2.*, pdpbox==0.2.1, imgaug==0.2.5
@@ -142,7 +142,7 @@ pipe_rf = make_pipeline(ord_enc,
                         RandomForestClassifier(random_state = 42, n_jobs = -1))
 ~~~
 Gridsearch for model hyperparameters
- - To show the impact of the hyperparameter gridsearch method, only the Random Forest Classifier has been gridsearched for hyperparameters. The other models were fitted using either default values, naive assumption or a combination of the two
+ - To show the impact of the hyperparameter gridsearch method, only the Random Forest Classifier has been gridsearched for hyperparameters. The other models were fitted using either default values, naive assumption or a combination of the two.
  - The Random Forest Classifier would typically place lower than the Extreme Gradient Boosting Classifier in a controlled comparison of accuracies, this is a metric we can use to gauge the impact of our hyperparameter gridsearch. Using only a three-parameter grid, the increase in model performance is apparent.
 ~~~
 params_rf = {'randomforestclassifier__max_depth': range(15, 24),
@@ -282,3 +282,5 @@ Random_Forest	        0.966158	0.933419	0.938695
 XGB	                0.957648	0.922606	0.929716
 KNeighbors	        0.882856	0.849054	0.858778
 Logistic_Regression	0.703801	0.714753	0.748463
+
+Thanks for reading!
