@@ -16,8 +16,6 @@ you'll need to make sure the following requirements are installed in your enviro
 ~~~
 import warnings
 warnings.filterwarnings("ignore", category = FutureWarning)
-import io
-from google.colab import files
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -30,13 +28,12 @@ from sklearn.impute import KNNImputer
 from sklearn.neighbors import KNeighborsClassifier
 from xgboost import XGBClassifier
 from sklearn.linear_model import LogisticRegression
-from category_encoders import OneHotEncoder, OrdinalEncoder
+from category_encoders import OrdinalEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pdpbox import pdp
-from sklearn.datasets import make_classification
 from sklearn.metrics import ConfusionMatrixDisplay
 
 df = pd.read_csv('churn.csv', parse_dates = ['joining_date'])
@@ -208,7 +205,7 @@ pd.Series(data = importances, index = feats
 plt.show()
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170893039-3d54d1d4-e7f6-4205-9aa1-d91f2262d94d.png)
-The feature importances of the model are helpful for investigating features which the model would benefit from an alteration or deletion of
+The feature importances of the model are helpful for investigating features which the model would benefit from an alteration or deletion of.
 ~~~
 k = {'Training Acc.': [], 'Test Acc.': [], 'F1 Score': []}
 # add the scores to dictionary for later comparison
