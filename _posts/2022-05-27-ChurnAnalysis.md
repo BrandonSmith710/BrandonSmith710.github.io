@@ -161,7 +161,7 @@ Below are the parameters output by the gridsearch
  'randomforestclassifier__max_features': 'auto',
  'randomforestclassifier__n_estimators': 60}
  
-Now it is time to construct the final models which will be compared at the end, these are built using the hyperparameters that have been chosen or searched for.
+Now it is time to construct the final models which will be compared, these are built using the hyperparameters that were chosen or searched for.
 ~~~
 pipe_rf = make_pipeline(ord_enc,
                         StandardScaler(),
