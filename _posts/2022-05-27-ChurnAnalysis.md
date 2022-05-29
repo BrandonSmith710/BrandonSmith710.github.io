@@ -227,6 +227,10 @@ for name, est in zip(m, [pipe_rf, pipe_xgb, pipe_knn, pipe_logr]):
 plt.show()
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170893181-0d38b7cf-3cb5-4f79-ad14-26278b9625ed.png)
+![image](https://user-images.githubusercontent.com/75755695/170893562-abc17c18-1c53-4ce0-9fa0-6578f564e832.png)
+![image](https://user-images.githubusercontent.com/75755695/170893567-37b1dace-97e6-4cca-8971-203a355c4a5d.png)
+![image](https://user-images.githubusercontent.com/75755695/170893571-8cedf614-4f03-4fee-8d96-5263d1a2c708.png)
+
 Classification Reports - Precision, Recall and F1 Score
 ~~~
 for name, est in zip(m, [pipe_rf, pipe_xgb, pipe_knn, pipe_logr]):
@@ -243,6 +247,10 @@ for feat in X_test.drop(columns = ['feedback', 'membership_category',
 plt.show()
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170893261-27eecd27-ebf8-401d-a95b-0b566a1c461e.png)
+![image](https://user-images.githubusercontent.com/75755695/170893591-a580b32f-f403-4e54-af85-369aad1bf4ce.png)
+![image](https://user-images.githubusercontent.com/75755695/170893595-cfc3f8a1-71b4-45ed-a683-087c9d2defeb.png)
+![image](https://user-images.githubusercontent.com/75755695/170893600-93de25e8-e37f-47cf-96f4-9cfe2d6e477d.png)
+![image](https://user-images.githubusercontent.com/75755695/170893605-43cb5578-2897-48c5-ad15-3db2a8b934ac.png)
 
 As you can see in the PDP plot for points_in_wallet, the predicted value for churn increases right around 500 points, and decreases right around 700. If you'll recall the Kernal Density Estimate plots shown in the EDA section of this report, points_in_wallet saw a sharp spike in density right around 500 points, and then a decrease at about 700. It is noticeable that the majority of customers are within the 500-700 range of points_in_wallet, and it is within reason to say that the majority of customers who churn, come from the majority of customers, and that since the majority customers have a points_in_wallet value in the range of 500-700, a typical points_in_wallet range for a customer to churn with would be 500-700.
 ~~~
@@ -272,8 +280,8 @@ Compare model scores
 ~~~
 df.head()
 ~~~ 
-	               Training Acc.|Test Acc.|F1 Score
-Random_Forest	      |0.966158	|0.933419	|0.938695
-XGB	                |0.957648	|0.922606	|0.929716
-KNeighbors	        |0.882856	|0.849054	|0.858778
-Logistic_Regression	|0.703801	|0.714753	|0.748463
+	               Training Acc.    Test Acc.       F1 Score
+Random_Forest	        0.966158	0.933419	0.938695
+XGB	                0.957648	0.922606	0.929716
+KNeighbors	        0.882856	0.849054	0.858778
+Logistic_Regression	0.703801	0.714753	0.748463
