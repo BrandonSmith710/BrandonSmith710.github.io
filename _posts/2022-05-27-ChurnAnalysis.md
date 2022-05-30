@@ -71,14 +71,14 @@ plt.show()
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170802427-b0bb7239-200e-4592-aa57-1bad6a183da6.png)
 
-Plot Target Distribution
+Plot target distribution
 ~~~
 pd.Series([16980, 20012]).plot(kind = 'bar')
 plt.show()
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170803014-b56e6cc5-4e2a-4100-a221-6ce072e56dd2.png)
 
-Data Cleaning and Imputation
+Clean and impute missing or unusable data
 ~~~
 # several columns contain invalid values which need to be replaced or removed
 df['joined_through_referral'] = pd.Series(
@@ -158,7 +158,6 @@ grid_rf.fit(X, y)
 grid_rf.best_params_
 ~~~
 Below are the parameters output by the gridsearch
-
 {'randomforestclassifier__max_depth': 15,
  'randomforestclassifier__max_features': 'auto',
  'randomforestclassifier__n_estimators': 60}
