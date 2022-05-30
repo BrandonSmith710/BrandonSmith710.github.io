@@ -265,6 +265,7 @@ df_nums[col].plot(kind = 'kde')
 plt.show()
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170893325-6989a7dd-6b9b-457f-8bd5-d1d90f5074e2.png)
+
 Plot the ROC Curve for each classifier
 ~~~
 plt.figure(figsize = (18, 20))
