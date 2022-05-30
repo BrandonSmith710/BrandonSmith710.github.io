@@ -212,6 +212,7 @@ pd.Series(data = importances, index = feats
 plt.show()
 ~~~
 ![image](https://user-images.githubusercontent.com/75755695/170893039-3d54d1d4-e7f6-4205-9aa1-d91f2262d94d.png)
+
 The feature importances of the model are helpful for investigating features which the model would benefit from an alteration or deletion of.
 ~~~
 k = {'Training Acc.': [], 'Test Acc.': [], 'F1 Score': []}
