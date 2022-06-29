@@ -69,11 +69,11 @@ Movies show virtually no relationship between genre and IMDB score.
 
 ![image](https://user-images.githubusercontent.com/75755695/176345486-67c1f00d-a058-44ba-8ed8-5917e012d5dd.png)
 
-Drama has a higher correlation with IMDB score than any other genre. Also visible is the relation between age certification and number of seasons for TV.
+Drama has a higher correlation with IMDB score than any other TV genre. Also visible is the relation between age certification and number of seasons, this is another indicator of popularity(Or at least financial success).
 
 ![image](https://user-images.githubusercontent.com/75755695/176342770-543cbaa1-3864-497c-84e7-b290b8a643be.png)
 
-Family oriented shows average the most seasons, another sure indicator of (financial)success.
+Family oriented shows average the most seasons.
 
 ![image](https://user-images.githubusercontent.com/75755695/176345627-48e93c87-ea89-4315-80e4-8c13df9cce5c.png)
 
