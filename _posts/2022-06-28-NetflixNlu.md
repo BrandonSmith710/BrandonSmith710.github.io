@@ -81,7 +81,7 @@ TV-Y7 rated shows and family oriented shows average the most seasons.
 ![image](https://user-images.githubusercontent.com/75755695/176345627-48e93c87-ea89-4315-80e4-8c13df9cce5c.png)
 
 
-Documentary movies show the highest correlation with imdb_score, with a coefficient of roughly .3
+Documentary movies show the highest correlation with imdb_score, with a coefficient of roughly .3.
 
 ![image](https://user-images.githubusercontent.com/75755695/176345854-0aed310c-d6d5-452a-9ae3-23607334d764.png)
 
