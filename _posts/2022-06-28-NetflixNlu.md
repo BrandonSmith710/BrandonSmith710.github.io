@@ -2,7 +2,7 @@
 layout: post
 title: Neflix Television & Movies
 title-color: orange
-subtitle: Why do customers leave?
+subtitle: Investigating the bingeworthy
 tags: [data analysis, natural language understanding, python]
 ---
 
