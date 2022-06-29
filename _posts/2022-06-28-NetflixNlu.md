@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customer Churn Analysis and Prediction
+title: Neflix: Television and Movies
 title-color: orange
 subtitle: Why do customers leave?
 tags: [data analysis, machine learning, python]
