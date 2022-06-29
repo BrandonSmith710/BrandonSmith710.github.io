@@ -59,32 +59,30 @@ Popular Movies: The people love drama, and comedy is not far behind.
 
 ![image](https://user-images.githubusercontent.com/75755695/176343368-be795e30-9b5d-4d18-8d67-cf33a4b01fda.png)
 
-In order to visualize the impact of genre, a categorical variable, I've encoded the feature two ways. The first will support inspection of the genre attribute as a whole, and the second will scrutinize each of the 19 genres.
+In order to visualize the impact of genre, a categorical variable, I've encoded it two ways. The first will support inspection of the genre attribute as a whole, and the second will scrutinize each of the 19 genres.
 
-TV
+TV presents a minimal relationship between genre and IMDB score.
 
 ![image](https://user-images.githubusercontent.com/75755695/176342414-ad061681-4466-4f76-a800-890fdff9c05b.png)
 
-Movies
+Movies show virtually no relationship between genre and IMDB score.
 
 ![image](https://user-images.githubusercontent.com/75755695/176345486-67c1f00d-a058-44ba-8ed8-5917e012d5dd.png)
 
-Both television and movies are showing little to no relationship between genre as a whole and IMDB score.
-
-
-Age certification appears to have a correlation with number of seasons for TV.
+Drama has a higher correlation with IMDB score than any other genre. Also visible is the relation between age certification and number of seasons for TV.
 
 ![image](https://user-images.githubusercontent.com/75755695/176342770-543cbaa1-3864-497c-84e7-b290b8a643be.png)
 
-TV-Y7 rated shows and family oriented shows average the most seasons.
+Family oriented shows average the most seasons, another sure indicator of (financial)success.
 
 ![image](https://user-images.githubusercontent.com/75755695/176345627-48e93c87-ea89-4315-80e4-8c13df9cce5c.png)
 
 
-Documentary movies show the highest correlation with imdb_score, with a coefficient of roughly .3.
+Documentary movies have the highest correlation with IMDB score, with a coefficient of roughly .3.
 
 ![image](https://user-images.githubusercontent.com/75755695/176345854-0aed310c-d6d5-452a-9ae3-23607334d764.png)
 
+What can be learned from the language used to describe each movie or show? Next I'll dissect the descriptions and find out what words and topics are associated with top scores. After fitting a gensim LDA model to the descriptions, both movies and shows can be represented as 15 topics, respectively.
 
-What can we learn from the language used to describe each movie or show? Let's dissect the descriptions and find out what words and topics are associated with success.
+
 
