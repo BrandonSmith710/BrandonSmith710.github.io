@@ -67,13 +67,24 @@ TV
 
 Movies
 
-![image](https://user-images.githubusercontent.com/75755695/176344724-e2a25c49-e65e-4f6e-ad8c-77fd986f7cbe.png)
+![image](https://user-images.githubusercontent.com/75755695/176345486-67c1f00d-a058-44ba-8ed8-5917e012d5dd.png)
 
-Both television and movies are showing little to not relationship between genre as a whole and IMDB score.
+Both television and movies are showing little to not relationship between genre as a whole and IMDB score, so I'll skip that method of encoding for movies.
 
 
-Age certification appears to have a correlation with number of seasons
+Age certification appears to have a correlation with number of seasons for TV.
 
 ![image](https://user-images.githubusercontent.com/75755695/176342770-543cbaa1-3864-497c-84e7-b290b8a643be.png)
 
+TV-Y7 rated shows and family oriented shows average the most seasons.
+
+![image](https://user-images.githubusercontent.com/75755695/176345627-48e93c87-ea89-4315-80e4-8c13df9cce5c.png)
+
+
+Documentary movies show the highest correlation with imdb_score, with a coefficient of roughly .3
+
+![image](https://user-images.githubusercontent.com/75755695/176345854-0aed310c-d6d5-452a-9ae3-23607334d764.png)
+
+
+What can we learn from the language used to describe each movie or show? Let's dissect the descriptions and find out what words and topics are associated with success.
 
