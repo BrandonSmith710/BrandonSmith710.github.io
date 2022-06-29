@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Neflix Television & Movies
+title: Neflix Natural Language Understanding
 title-color: orange
 subtitle: Investigating the bingeworthy
 tags: [data analysis, natural language understanding, python]
