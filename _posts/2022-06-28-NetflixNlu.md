@@ -69,7 +69,7 @@ Movies
 
 ![image](https://user-images.githubusercontent.com/75755695/176345486-67c1f00d-a058-44ba-8ed8-5917e012d5dd.png)
 
-Both television and movies are showing little to no relationship between genre as a whole and IMDB score, so I'll skip that method of encoding for movies.
+Both television and movies are showing little to no relationship between genre as a whole and IMDB score.
 
 
 Age certification appears to have a correlation with number of seasons for TV.
