@@ -142,6 +142,7 @@ The country dataframe holds null values due to the number of topics and genres f
 ~~~
 country_df.drop('min_genre_tv min_genre_mv'.split(), axis = 0, inplace = True)
 ~~~
+
 In working with the new data we've acquired, 107 countries can be seen popularizing certain topics and genres in the country dataframe.
 
 ![Screenshot (52)](https://user-images.githubusercontent.com/75755695/176356800-a61d84a0-38fa-40d2-80e5-cd9ba8a8e81e.png)
