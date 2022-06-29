@@ -100,8 +100,8 @@ lst = list()
 for countries in df_titles['production_countries']:
     lamb_alf = lambda x: x.isalpha()
     re = [''.join(filter(lamb_alf, c)) for c in countries.split(',')]
-    for x in re:
-        lst.append(x)
+    for country in re:
+        lst.append(country)
 countries = [c for c in list(set(lst)) if c]
 countries_dict = {}
 for country in countries:
