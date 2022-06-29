@@ -3,7 +3,7 @@ layout: post
 title: Netflix Data Analysis: TV & Movies
 title-color: orange
 subtitle: Why do customers leave?
-tags: [data analysis, natural language understanding, python]
+tags: [data analysis, machine learning, python]
 ---
 
 In this report we will learn more about what characterizes the most popular television and movies offered by Netflix.
