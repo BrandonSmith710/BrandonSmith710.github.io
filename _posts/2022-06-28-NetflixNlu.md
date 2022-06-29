@@ -85,4 +85,11 @@ Documentary movies have the highest correlation with IMDB score, with a coeffici
 What can be learned from the language used to describe each movie or show? Next I'll dissect the descriptions and find out what words and topics are associated with top scores. After fitting a gensim LDA model to the descriptions, both movies and shows can be represented as 15 topics, respectively.
 
 
+Shows concerning topic 8 have the highest correlation with number of seasons, and several other topics bear a similar relationship.
+
+![image](https://user-images.githubusercontent.com/75755695/176353449-79cf3739-da38-4c0c-828c-56f38cae09a2.png)
+
+Movies focused on topics 8 and 10 have the highest correlations to IMDB score.
+
+![image](https://user-images.githubusercontent.com/75755695/176353499-4959ddd3-205a-4c71-aa29-febea7e1ff7a.png)
 
