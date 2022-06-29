@@ -61,7 +61,18 @@ Popular Movies: The people love drama, and comedy is not far behind.
 
 In order to visualize the impact of genre, a categorical variable, I've encoded the feature two ways. The first will support inspection of the genre attribute as a whole, and the second will scrutinize each of the 19 genres.
 
+TV
+
 ![image](https://user-images.githubusercontent.com/75755695/176342414-ad061681-4466-4f76-a800-890fdff9c05b.png)
+
+Movies
+
+![image](https://user-images.githubusercontent.com/75755695/176344724-e2a25c49-e65e-4f6e-ad8c-77fd986f7cbe.png)
+
+Both television and movies are showing little to not relationship between genre as a whole and IMDB score.
+
+
+Age certification appears to have a correlation with number of seasons
 
 ![image](https://user-images.githubusercontent.com/75755695/176342770-543cbaa1-3864-497c-84e7-b290b8a643be.png)
 
