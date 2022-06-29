@@ -93,3 +93,55 @@ Movies focused on topics 8 and 10 have the highest correlations to IMDB score.
 
 ![image](https://user-images.githubusercontent.com/75755695/176353499-4959ddd3-205a-4c71-aa29-febea7e1ff7a.png)
 
+Now that topic and genre data is available in numeric a format, it will be easy to comb through other features, like production countries, and see which topics and genres are most popular in each country.
+
+~~~
+lst = list()
+for countries in df_titles['production_countries']:
+    lamb_alf = lambda x: x.isalpha()
+    re = [''.join(filter(lamb_alf, c)) for c in countries.split(',')]
+    for x in re:
+        lst.append(x)
+countries = [c for c in list(set(lst)) if c]
+countries_dict = {}
+for country in countries:
+    tv_max_genre, tv_min_genre = '', ''
+    mv_max_genre, mv_min_genre = '', ''
+    tv_max, tv_min = 0, 0
+    mv_max, mv_min = 0, 0
+    df_xtv = df_tv[df_tv['production_countries'].apply(
+        lambda x: country in x)]
+    df_xtv = df_xtv[df_xtv['production_countries'] != '[]']
+    df_xmv = df_mv[df_mv['production_countries'].apply(
+        lambda x: country in x)]
+    df_xmv = df_xmv[df_xmv['production_countries'] != '[]']
+    max_top_tv, min_top_tv = df_xtv['topic'].max(), df_xtv['topic'].min()
+    max_top_mv, min_top_mv = df_xmv['topic'].max(), df_xtv['topic'].min()
+    for genre in df_xtv.columns[14: -3]:
+        stv = df_xtv[genre].sum()
+        smv = df_xmv[genre].sum()
+        if stv > tv_max:
+            tv_max, tv_max_genre = stv, genre
+        elif stv < tv_min:
+            tv_min, tv_min_genre = stv, genre
+        if smv > mv_max:
+            mv_max, mv_max_genre = smv, genre
+        elif smv < mv_min:
+            mv_min, mv_min_genre = smv, genre
+    countries_dict[country] = [max_top_tv, min_top_tv, tv_max_genre,
+                               tv_min_genre, max_top_mv, min_top_mv,
+                               mv_max_genre, mv_min_genre]
+country_df = pd.DataFrame(countries_dict)
+country_df.index = ['max_topic_tv', 'min_topic_tv', 'max_genre_tv',
+                    'min_genre_tv', 'max_topic_mv', 'min_topic_mv',
+                    'max_genre_mv', 'min_genre_mv']
+~~~
+
+The country dataframe holds null values due to the number of topics and genres for a given title occasionally being one or zero. Also, there are numerous countries which only have one title recorded. For these reasons, and due to the defaults of Python, the minimum genres for TV and movies can be dropped, and the remaining null values can be safely ignored.
+
+~~~
+country_df.drop('min_genre_tv min_genre_mv'.split(), axis = 0, inplace = True)
+~~~
+In working with the new data we've acquired, 107 countries can be seen popularizing certain topics and genres in the country dataframe.
+
+![Screenshot (52)](https://user-images.githubusercontent.com/75755695/176356800-a61d84a0-38fa-40d2-80e5-cd9ba8a8e81e.png)
