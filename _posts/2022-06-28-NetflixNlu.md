@@ -26,8 +26,8 @@ Take a look at the average IMDB scores for television, and then movies.
 
 ![image](https://user-images.githubusercontent.com/75755695/176340345-c6c5571f-dc71-4254-83b0-238cef16ed97.png)
 
-An important next step will be to locate the extreme outliers for IMDB score, as this score will be a primary metric in gauging overall success for a movie.
-In this case, rows with an imdb_score further than three standard deviations from the mean will be considered outlying.
+An important next step will be to locate the extreme outliers for IMDB score, as this score will be a primary metric in gauging overall success for a movie or show.
+In this case, rows with an IMDB score further than three standard deviations from the mean will be considered outlying.
 Notably the shows depicted by their respective box plot have a higher average IMDB score than movies.
 
 TV Show Outliers:
@@ -38,7 +38,7 @@ Movie Outliers:
 
 ![image](https://user-images.githubusercontent.com/75755695/176341151-a4c4a782-a9e7-4654-81d6-fcc28d0f594b.png)
 
-Now I can remove the noisy titles, as the descriptions for these titles will not help our natural language analysis.
+Now I can remove the noisy titles, as the descriptions of these plotlines will not help with natural language analysis.
 
 ~~~
 tv_std, tv_mean = df_tv.imdb_score.std(), df_tv.imdb_score.mean()
@@ -50,3 +50,19 @@ df_mv = df_mv.iloc[[x for x in range(len(df_mv)) if df_mv.iloc[x]['imdb_score']
                      >= (mv_mean - (3 * mv_std)) and df_mv.iloc[x]['imdb_score']
                      <= (mv_mean + (3 * mv_std))]]
 ~~~
+
+In order to visualize the correlation of categorical features such as genre, I will encode the feature two ways. The first will support inspection of the genre attribute as a whole, and the second will scrutinize each of the 19 genres. First, I'll look at the occupation of genre in TV and movies.
+
+Popular TV: Drama is the most popular television genre according to our dataset.
+
+![image](https://user-images.githubusercontent.com/75755695/176343327-a2f31c64-a6d9-449a-b2c7-5485c617e09e.png)
+
+Popular Movies: The people love drama, and comedy is not far behind.
+
+![image](https://user-images.githubusercontent.com/75755695/176343368-be795e30-9b5d-4d18-8d67-cf33a4b01fda.png)
+
+![image](https://user-images.githubusercontent.com/75755695/176342414-ad061681-4466-4f76-a800-890fdff9c05b.png)
+
+![image](https://user-images.githubusercontent.com/75755695/176342770-543cbaa1-3864-497c-84e7-b290b8a643be.png)
+
+
