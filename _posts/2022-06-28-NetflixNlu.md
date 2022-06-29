@@ -51,8 +51,6 @@ df_mv = df_mv.iloc[[x for x in range(len(df_mv)) if df_mv.iloc[x]['imdb_score']
                      <= (mv_mean + (3 * mv_std))]]
 ~~~
 
-In order to visualize the correlation of categorical features such as genre, I will encode the feature two ways. The first will support inspection of the genre attribute as a whole, and the second will scrutinize each of the 19 genres. First, I'll look at the occupation of genre in TV and movies.
-
 Popular TV: Drama is the most popular television genre according to our dataset.
 
 ![image](https://user-images.githubusercontent.com/75755695/176343327-a2f31c64-a6d9-449a-b2c7-5485c617e09e.png)
@@ -60,6 +58,8 @@ Popular TV: Drama is the most popular television genre according to our dataset.
 Popular Movies: The people love drama, and comedy is not far behind.
 
 ![image](https://user-images.githubusercontent.com/75755695/176343368-be795e30-9b5d-4d18-8d67-cf33a4b01fda.png)
+
+In order to visualize the impact of genre, a categorical variable, I've encoded the feature two ways. The first will support inspection of the genre attribute as a whole, and the second will scrutinize each of the 19 genres.
 
 ![image](https://user-images.githubusercontent.com/75755695/176342414-ad061681-4466-4f76-a800-890fdff9c05b.png)
 
