@@ -7,17 +7,46 @@ tags: [data analysis, natural language understanding, python]
 ---
 
 
-In this report we will learn more about what characterizes the shows and movies people watch most on Netflix.
+In this report I will characterize the most popular shows and movies on Netflix.
 Feel free to make your way over to https://github.com/BrandonSmith710/netflix_nlp_analysis if you would like the full dataset and notebook.
 
-Let's begin with some introductory analysis and visualize the ratio of shows and movies.
+I will begin with some introductory analysis and visualize the ratio of shows to movies.
 
 ![image](https://user-images.githubusercontent.com/75755695/176339508-c5438251-698e-4c33-add0-1ce5486223f0.png)
 
-Now let's visualize the distributions of age certifications on Netflix.
+Next, I'll check the distributions of age certifications on Netflix.
+
 ![image](https://user-images.githubusercontent.com/75755695/176339260-86cb7e08-7f68-4c3d-97ba-c827da1c3c6d.png)
 
 ![image](https://user-images.githubusercontent.com/75755695/176339443-4e0d078d-0911-486d-8168-25019e040824.png)
 
+Take a look at the average IMDB scores for television, and then movies.
 
+![image](https://user-images.githubusercontent.com/75755695/176340219-22639de1-a835-441b-8543-afb0a9e10b00.png)
 
+![image](https://user-images.githubusercontent.com/75755695/176340345-c6c5571f-dc71-4254-83b0-238cef16ed97.png)
+
+An important next step will be to locate the extreme outliers for IMDB score, as this score will be a primary metric in gauging overall success for a movie.
+In this case, rows with an imdb_score further than three standard deviations from the mean will be considered outlying.
+Notably the shows depicted by their respective box plot have a higher average IMDB score than movies.
+
+TV Show Outliers:
+
+![image](https://user-images.githubusercontent.com/75755695/176341099-ea9fc209-8690-4872-bcfb-c4013a622e71.png)
+
+Movie Outliers:
+
+![image](https://user-images.githubusercontent.com/75755695/176341151-a4c4a782-a9e7-4654-81d6-fcc28d0f594b.png)
+
+Now I can remove the noisy titles, as the descriptions for these titles will not help our natural language analysis.
+
+~~~
+tv_std, tv_mean = df_tv.imdb_score.std(), df_tv.imdb_score.mean()
+mv_std, mv_mean = df_mv.imdb_score.std(), df_mv.imdb_score.mean()
+df_tv = df_tv.iloc[[x for x in range(len(df_tv)) if df_tv.iloc[x]['imdb_score']
+                     >= (tv_mean - (3 * tv_std)) and df_tv.iloc[x]['imdb_score']
+                     <= (tv_mean + (3 * tv_std))]]
+df_mv = df_mv.iloc[[x for x in range(len(df_mv)) if df_mv.iloc[x]['imdb_score']
+                     >= (mv_mean - (3 * mv_std)) and df_mv.iloc[x]['imdb_score']
+                     <= (mv_mean + (3 * mv_std))]]
+~~~
