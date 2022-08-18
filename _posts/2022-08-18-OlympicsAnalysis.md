@@ -35,18 +35,18 @@ df_winter.filter(col('Medal') == 'Gold') \
     .show()
 
 spark.sql('''with one as
-				         (SELECT Year
-				          , Country
-				          , COUNT(*) as Gold_Count
-				          , rank() OVER( PARTITION BY Year
-					   	  		 ORDER BY COUNT(*) DESC ) as rank
-				          FROM winter
-				          WHERE Medal = "Gold"
-				          GROUP BY Year, Country)
-	  		     SELECT Year
-			       , Country
-			       , Gold_Count
-	  		     FROM one
-			       WHERE rank = 1
-			       ORDER BY Year DESC;''').show()
+		 (SELECT Year
+	          , Country
+	          , COUNT(*) as Gold_Count
+	          , rank() OVER( PARTITION BY Year
+	   	  		 ORDER BY COUNT(*) DESC ) as rank
+	          FROM winter
+	          WHERE Medal = "Gold"
+	          GROUP BY Year, Country)
+	     SELECT Year
+	     , Country
+	     , Gold_Count
+	     FROM one
+	     WHERE rank = 1
+	     ORDER BY Year DESC;''').show()
  ~~~
