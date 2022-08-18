@@ -11,16 +11,16 @@ Each question will be answered using the Python and Apache Spark library, Pyspar
 as well as the ability to query using SQL syntax. The data has been loaded into a Pyspark dataframe, and also into a Pyspark view,
 allowing me to write each example using both Pyspark and SQL syntax, with the goal of showing the variance between the two.
 
-The data consists of columns, which after transformation, have the following data types:
- |-- Year: long (integer)
- |-- City: string 
- |-- Sport: string
- |-- Discipline: string 
- |-- Athlete: string 
- |-- Country: string 
- |-- Gender: string 
- |-- Event: string 
- |-- Medal: string 
+The data consists of columns, which after transformation, have the following data types:\
+ |-- Year: long (integer)\
+ |-- City: string\
+ |-- Sport: string\
+ |-- Discipline: string\ 
+ |-- Athlete: string\
+ |-- Country: string\ 
+ |-- Gender: string\ 
+ |-- Event: string\ 
+ |-- Medal: string\ 
  
  1) Which countries won the most gold medals each year?
  ~~~
