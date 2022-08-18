@@ -25,7 +25,7 @@ The data consists of columns, which after transformation, have the following dat
  1) Which countries won the most gold medals each year?
  ~~~
 df_winter.filter(col('Medal') == 'Gold') \
-	.groupBy('Year', 'Country') \
+    .groupBy('Year', 'Country') \
     .agg(count('*').alias('Gold_Count')) \
     .select('*', rank().over(Window.partitionBy('Year') \
         .orderBy(desc('Gold_Count'))).alias('rank')) \
