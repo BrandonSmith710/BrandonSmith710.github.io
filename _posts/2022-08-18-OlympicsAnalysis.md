@@ -15,7 +15,7 @@ The data consists of columns, which after transformation, have the following dat
  |-- Year: long (integer)\
  |-- City: string\
  |-- Sport: string\
- |-- Discipline: string\ 
+ |-- Discipline: string\
  |-- Athlete: string\
  |-- Country: string\
  |-- Gender: string\
