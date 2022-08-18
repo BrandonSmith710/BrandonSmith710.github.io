@@ -17,9 +17,9 @@ The data consists of columns, which after transformation, have the following dat
  |-- Sport: string\
  |-- Discipline: string\ 
  |-- Athlete: string\
- |-- Country: string\ 
- |-- Gender: string\ 
- |-- Event: string\ 
+ |-- Country: string\
+ |-- Gender: string\
+ |-- Event: string\
  |-- Medal: string\ 
  
  1) Which countries won the most gold medals each year?
