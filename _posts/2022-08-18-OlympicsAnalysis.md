@@ -7,7 +7,7 @@ thumbnail-img: /assets/img/spark_logo.jpeg
 tags: [data analysis, big data, pyspark, python]
 ---
 
-This article will focus on the methods used to answer certain questions about one winter olympic games dataset.
+This article will focus on the methods used to answer certain questions about a winter olympic games dataset.
 Each question will be answered using the Python and Apache Spark library, Pyspark, which offers its own syntax for querying,
 as well as the ability to query using SQL syntax. The data has been loaded into a Pyspark dataframe, and also into a Pyspark view,
 allowing me to write each example using both Pyspark and SQL syntax, with the goal of showing the variance between the two.
