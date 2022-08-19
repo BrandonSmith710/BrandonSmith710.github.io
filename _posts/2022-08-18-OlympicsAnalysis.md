@@ -136,14 +136,14 @@ spark.sql('''with one as
 5) Which athletes won the second most gold medals each year?
 ~~~
 df_winter.filter(col('Medal') == 'Gold') \
-	.groupBy('Year', 'Athlete') \
-	.agg(count('*').alias('Gold_Count')) \
-	.select('*', rank().over(Window.partitionBy('Year') \
+    .groupBy('Year', 'Athlete') \
+    .agg(count('*').alias('Gold_Count')) \
+    .select('*', rank().over(Window.partitionBy('Year') \
 	    .orderBy(desc('Gold_Count'))).alias('rank')) \
-	.filter(col('rank') == 2) \
-        .orderBy(desc('Year'), 'Athlete') \
-	.select('Year', 'Athlete', 'Gold_Count') \
-	.show()
+    .filter(col('rank') == 2) \
+    .orderBy(desc('Year'), 'Athlete') \
+    .select('Year', 'Athlete', 'Gold_Count') \
+    .show()
 
 spark.sql('''with one as
 		 (SELECT Year
