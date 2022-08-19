@@ -3,6 +3,7 @@ layout: post
 title: Olympic Games Analysis with Pyspark
 title-color: orange
 subtitle: Years 1896-2014
+thumbnail-img: /assets/img/spark_logo.jpeg
 tags: [data analysis, big data, pyspark, python]
 ---
 
