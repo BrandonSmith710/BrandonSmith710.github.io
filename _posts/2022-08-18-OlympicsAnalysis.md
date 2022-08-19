@@ -48,7 +48,7 @@ spark.sql('''with one as
 	     , Gold_Count
 	     FROM one
 	     WHERE rank = 1
-       	     ORDER BY Year DESC;''').show()
+       	     ORDER BY Year DESC;''').show() 
  ~~~
 
 2) Which countries won the most Gold Medals in each sport for all years combined?
