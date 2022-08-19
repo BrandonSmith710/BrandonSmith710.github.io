@@ -105,7 +105,7 @@ spark.sql('''with one as
 	     SELECT Year
 	     , Sport
 	     , Country
-	     ,Silver_Count
+	     , Silver_Count
 	     FROM one
 	     WHERE rank = 1
 	     ORDER BY Year DESC, Sport;''').show()
