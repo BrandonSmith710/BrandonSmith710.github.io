@@ -282,3 +282,6 @@ spark.sql('''with one as
 	     WHERE rank = 1
 	     ORDER BY Country;''').show()
 ~~~
+
+It is clear to see that Pyspark provides an intuitive package for analyzing vast amounts of data. Hopefully the above examples have shed light on how you can
+use Pyspark to analyze millions of rows of data in very little time.
