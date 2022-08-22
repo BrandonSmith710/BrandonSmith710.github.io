@@ -9,16 +9,17 @@
 title: My Website
 
 # Your name to show in the footer
-author: Some Person
+author: Brandon Smith
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
   About Me: "aboutme"
+  LinkedIn: "https://www.linkedin.com/in/brandonsmithdatascience/"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+    - Learn SQL Analytic Functions: "https://www.kaggle.com/learn/advanced-sql"
+    - Some Fun Coding Exercises: "https://www.codingame.com/home"
+#   Author's home: "https://deanattali.com"
 
 # --- Logo --- #
 
@@ -39,13 +40,13 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
+  email: "brandon.smith8@yahoo.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: c/daattali
+#   facebook: deanattali
+  github: BrandonSmith710
+#   twitter: daattali
+#   patreon: DeanAttali
+#   youtube: c/daattali
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
@@ -134,10 +135,10 @@ footer-hover-col: "#0085A1"
 # --- Web Analytics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+gtag: "G-RN3J6EFZZ9"
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
-google_analytics: "G-RN3J6EFZZ9"
+# google_analytics: "G-RN3J6EFZZ9"
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""
