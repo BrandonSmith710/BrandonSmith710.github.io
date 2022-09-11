@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Superstore Data Visualization and Hypothesis Testing
+title: Superstore Data Report
 subtitle: 
 cover-img: 
 thumbnail-img: assets/img/Screenshot (6).png
@@ -36,10 +36,9 @@ In considering each year from which the data was provided, these were the most p
 ![image](https://user-images.githubusercontent.com/75755695/158914344-6dce84b3-75e3-4425-9ad1-629ee6ceacb1.png)
 ![Screenshot (10)](https://user-images.githubusercontent.com/75755695/158914569-8acd32ed-6c7c-4a89-b211-1e1b2f5ca139.png)
 
-Before exploring anymore visualizations, I conducted two product-specific hypothesis tests.
+Before exploring anymore visualizations, I conducted two product hypothesis tests.
 
 null hypothesis one: There is no association between the city of Fort Lauderdale and the Bretford CR4500 Series Slim Rectangular Table.
-
 null hypothesis two: There is no association between the state of New York and the Bretford CR4500 Series Slim Rectangular Table.
 ~~~
 # engineer features which indicate possession of target characteristics
@@ -65,16 +64,16 @@ ny_probabilities = pd.crosstab(df['Bretford'], df['New_York'], normalize = 'inde
 chi, fl_p_val, dof, expected = chi2_contingency(pd.crosstab(df['Bretford'], df['Fort_Laud']))
 chi, ny_p_val, dof, expected = chi2_contingency(pd.crosstab(df['Bretford'], df['New_York']))
 ~~~
-The resulting p-value for Fort Lauderdale was 8.252040908989258e-06. At the .05 significance level the directive is to reject null hypothesis one and conclude that there is a significant association between Fort Lauderdale and the Bretford Table.
+The resulting p-value for Fort Lauderdale was 8.252040908989258e-06. At a .05 significance level the directive is to reject null hypothesis one and conclude that there is a significant association between Fort Lauderdale and the Bretford Table.
 
-The resulting p-value for New York was 0.6524267307791584. At the .05 significance level the directive is to accept null hypothesis two and conclude that there is not a significant association between New York and the Bretford Table.
+The resulting p-value for New York was 0.6524267307791584. At a .05 significance level the directive is to accept null hypothesis two and conclude that there is not a significant association between New York and the Bretford Table.
 
-This line of code reports the distribution of states amongst purchases of the Bretford Table; the output is in the following cell.
+This line of code shows the distribution of states amongst purchases of the Bretford Table; the output:
 ~~~
 df[df['Product_Name'] == target_name]['State'].value_counts()
 ~~~
-This output tells us that Florida and Texas were the most popular states with the Bretford Table,
-and therefore a statistically significant association between Fort Lauderdale and the Bretford Table is conceivable.
+tells us that Florida and Texas were the most popular states with the Bretford Table,
+and therefore a statistically significant association between Fort Lauderdale and the Bretford Table is probable.
 ~~~
 Florida       2
 Texas         2
@@ -85,7 +84,7 @@ Idaho         1
 Name: State, dtype: int64
 ~~~
 
-The orange bar charts show company-wide profits by region.
+The orange bar charts show company profits by region.
 
 
 ![image](https://user-images.githubusercontent.com/75755695/158943517-dea3f270-05d4-457a-87c9-a89224a2fd6e.png)
@@ -97,7 +96,7 @@ df_c16 = df_16[df_16['Region'] == 'Central']
 unique_products = df_c16['Product_Name'].nunique()
 total_products = df_c16['Quantity'].sum()
 ~~~
-Let's have a look at the 10 most popular purchases in central during 2016.
+Here are the 10 most popular purchases in central during 2016.
 ~~~
 s = list(df_c16['Product_Name'])
 s1 = set(s)
@@ -120,7 +119,7 @@ Output
     Storex Dura Pro Binders: 3
     Panasonic KP-380BK Classic Electric Pencil Sharpener: 2
 ~~~
-Below are the respective profits of each product category from 2014-2017. Among the apparent relations in regional profits, the most notable are within central and south technology from 2015-2017, and in east and west technology from 2016-2017. Another point to investigate could be that in the west and central regions, customers purchased tech and office supplies at a similar rate, whereas in the east and south regions, tech and office supply purchases had a negative relation.
+Below are the respective profits of each product category from 2014-2017. Among the relations in regional profits, the most notable are between central and south technology from 2015-2017, and east and west technology from 2016-2017. Also shown are the west and central regions, with customers purchasing tech and office supplies at a similar rate until 2016, while in the east and south regions, tech and office supply purchases sold inversely until early 2016. Another space for attention is at the beginning of 2016, where central took a steep decline in tech purchases but east and west sold exponentially.
 
 
 ![Screenshot (16)](https://user-images.githubusercontent.com/75755695/158914792-4f435d36-1d5b-4b7d-ac9c-3c316e5db5a5.png)
@@ -132,7 +131,7 @@ Here is a section of the profits by postal code per product category:
 
 ![Screenshot (29)](https://user-images.githubusercontent.com/75755695/158942873-c9bffe70-8803-43a4-a5eb-9eb9d291861e.png)
 
-This boxplot suggests that throughout the four year timeframe of available data, there were three extraordinarily outlying purchases, one 2017 office supplies purchase from the west with a profit of $22,171, one 2017 tech purchase from the west with a profit of $18,984 and one 2017 tech purchase from the east with a profit of $19,301.
+This boxplot suggests that throughout the four year timeframe of available data, there were only three significantly outlying purchases, one 2017 office supplies purchase from the west with a profit of $22,171, one 2017 tech purchase from the west with a profit of $18,984 and one 2017 tech purchase from the east with a profit of $19,301.
 
 ![Screenshot (33)](https://user-images.githubusercontent.com/75755695/159067842-9d980a34-48ff-4b52-b613-328766925827.png)
 
@@ -207,7 +206,7 @@ for i in range(1, 10):
 
 ~~~
 
-The code above creates nine red barplots, each displays profits for the favorite products of the top nine customers. Only the Hon Olsen Stacker Stools and the Rogers Handheld Barrel Pencil Sharpener returned profits each year. Next, I will take a look at the regional and city-wide profits of the Hon Olsen Stacker Stools to find where the majority and minority of sales come from.
+The code above creates nine red barplots, each displays profits for the favorite products of the top nine customers. Only the Hon Olsen Stacker Stools and the Rogers Handheld Barrel Pencil Sharpener returned profits each year. Next, we'll see the regional and municipal profits of the Hon Olsen Stacker Stools to find where the majority and minority of sales come from.
 
 ![image](https://user-images.githubusercontent.com/75755695/158950869-f9036c6b-b135-46f1-b183-2b204fbea228.png)
 
@@ -222,4 +221,4 @@ The key and plot below tell us that during 2015 and 2017, the Hon Olsen Stacker 
 
 
 
-Throughout this article we took a look at the most popular areas of sale, some of the most frequent customers, and the items that the most frequent customers were buying. I also conducted a couple of statistical tests to ascertain the correlation of certain products with certain locations. With the data brought to light in this presentation, the process of focusing energy and resources into a nationwide business is hopefully quicker and more precise.
+Throughout this report we took a look at the most popular areas of sale, some of the most frequent customers, and items that the most frequent customers were buying. I also conducted a couple of statistical tests to ascertain the correlation of certain products with certain locations. With the data brought to light in this presentation, the process of focusing energy and resources into a nationwide business is hopefully quicker and more precise.
