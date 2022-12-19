@@ -15,6 +15,7 @@ The dataset examined in this post was made available on Kaggle.com by user vivek
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from scipy.stats import chi2_contingency
 ~~~
 
 ~~~
